@@ -1,4 +1,5 @@
-# Analyses for Tweets About National Sibling Day on April 10, 2018
+# Sibling Interactions on Twitter:
+# A Sample Identified by Tweets About National Sibling Day on April 10, 2018
 This is a class project for Timothy Brick's HDFS 597 "Mining Internet with Python" at the Pennsylvania State University.
 Copyrights to Xiaoran Sun, MS, and Timothy Brick, Ph.D., at the Pennsylvania State University
 For citation, please contact Xiaoran Sun xiaoran.sun@psu.edu
