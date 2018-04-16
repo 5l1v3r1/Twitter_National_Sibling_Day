@@ -15,7 +15,7 @@ Starting from 9pm, April 9th, until 4am, April 11st, I used Twitter Streaming AP
 
 The corresponding code file is `DiskListener.py`, created by Timothy Brick, with little edits by Xiaoran Sun for filtering criterion.
 
-This resulted in () tweets, with the total data file size as around 2.5GB. To get these raw data, please contact Xiaoran Sun.
+This resulted in 383,040 tweets, with the total data file size as around 2.5GB. To get these raw data, please contact Xiaoran Sun.
 
 ### Pre-processing raw data files & reading in raw data
 The raw data file (in json) is too large and when it's read in Jupyter as a whole, my laptop would crash. Therefore, I used bash command (on the Terminal application) to separate the json file by lines into separate text files.
