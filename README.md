@@ -20,10 +20,11 @@ This resulted in () tweets, with the total data file size as around 2.5GB. To ge
 ### Pre-processing raw data files & reading in raw data
 The raw data file (in json) is too large and when it's read in Jupyter as a whole, my laptop would crash. Therefore, I used bash command (on the Terminal application) to separate the json file by lines into separate text files.
 
-To separate a big json file into smaller files that are not larger than 300000 lines, I used:
-`split -l 20000 filename.json`
+To separate a big json file into smaller files that are not larger than 30,000 lines, I used:
+`split -l 30000 filename.json`
 
 But these smaller files cannot be read directly into jupyter due to their incompleteness. Therefore, at the beginning of each file, I had to make sure there was or I added a `[`, and at the end of each file, `]`.
 
 To check whether these files are complete as json lists and also get to know the length of each file, I used (bash command):
-`jq '. | length' SmallFileName`
+`jq '. | length' SmallFileName`. When checked by this command, there was some parse error or EOF with some small files, and I found that it was because `"` at the beginning or the end was reformatted into `“` or `”`. These quotation marks had to be formatted back. I did it manually, but I know it is better to write codes for this task and I will update on this soon.
+
