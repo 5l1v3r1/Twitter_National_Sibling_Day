@@ -17,7 +17,7 @@ The corresponding code file is `00_DiskListener.py`, created by Timothy Brick, w
 
 This resulted in 383,040 tweets, with the total data file size as around 2.5GB. To get these raw data, please contact Xiaoran Sun.
 
-### Pre-Processing Raw Data Files and Reading in Raw Data
+### Pre-Processing Raw Data Files
 The raw data file (in json) is too large and when it's read in Jupyter as a whole, my laptop would crash. Therefore, I used bash command (on the Terminal application) to separate the json file by lines into separate text files.
 
 To separate a big json file into smaller files that are not larger than 30,000 lines, I used:
