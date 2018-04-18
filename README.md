@@ -45,6 +45,7 @@ Text analyses conducted include:
 ## Results
 ### Text Analyses: Hashtags
 Hashtags extracted from all the tweets include 329,479 single hashtags, 182,753 bigrams, and 68,185 trigrams
+
 *Occurrences of single hashtags* <br />
 The 20 most frequent hashtags among the tweets are:
 <table>
@@ -131,5 +132,103 @@ The 20 most frequent hashtags among the tweets are:
     <tr>
         <td>resist</td>
         <td>832</td>
+    </tr>
+</table>
+
+*Occurrences of hashtag bigrams* <br />
+The 10 most frequent hashtag bigrams among the tweets are:
+<table>
+    <tr>
+        <th>Hashtag</th>
+        <th>Count</th>
+    </tr>
+    <tr>
+        <td>(&#x27;blackpanther&#x27;, &#x27;nationalsiblingsday&#x27;)</td>
+        <td>9813</td>
+    </tr>
+    <tr>
+        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;shuri&#x27;)</td>
+        <td>7035</td>
+    </tr>
+    <tr>
+        <td>(&#x27;blackpanther&#x27;, &#x27;shuri&#x27;)</td>
+        <td>7030</td>
+    </tr>
+    <tr>
+        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;strangerthings&#x27;)</td>
+        <td>6607</td>
+    </tr>
+    <tr>
+        <td>(&#x27;incredibles2&#x27;, &#x27;nationalsiblingsday&#x27;)</td>
+        <td>4387</td>
+    </tr>
+    <tr>
+        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;starwars&#x27;)</td>
+        <td>4164</td>
+    </tr>
+    <tr>
+        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;supernatural&#x27;)</td>
+        <td>3935</td>
+    </tr>
+    <tr>
+        <td>(&#x27;mtvbrkpopbts&#x27;, &#x27;premiosmtvmiaw&#x27;)</td>
+        <td>2758</td>
+    </tr>
+    <tr>
+        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;premiosmtvmiaw&#x27;)</td>
+        <td>1455</td>
+    </tr>
+    <tr>
+        <td>(&#x27;mtvbrkpopbts&#x27;, &#x27;nationalsiblingsday&#x27;)</td>
+        <td>1439</td>
+    </tr>
+</table>
+
+*Occurrences of hashtag trigrams* <br />
+The 10 most frequent hashtag trigrams among the tweets are:
+<table>
+    <tr>
+        <th>Hashtag</th>
+        <th>Count</th>
+    </tr>
+    <tr>
+        <td>(&#x27;blackpanther&#x27;, &#x27;nationalsiblingsday&#x27;, &#x27;shuri&#x27;)</td>
+        <td>7026</td>
+    </tr>
+    <tr>
+        <td>(&#x27;mtvbrkpopbts&#x27;, &#x27;nationalsiblingsday&#x27;, &#x27;premiosmtvmiaw&#x27;)</td>
+        <td>1424</td>
+    </tr>
+    <tr>
+        <td>(&#x27;mciliv&#x27;, &#x27;resist&#x27;, &#x27;soros&#x27;)</td>
+        <td>818</td>
+    </tr>
+    <tr>
+        <td>(&#x27;cskvkkr&#x27;, &#x27;mciliv&#x27;, &#x27;soros&#x27;)</td>
+        <td>818</td>
+    </tr>
+    <tr>
+        <td>(&#x27;cskvkkr&#x27;, &#x27;mciliv&#x27;, &#x27;resist&#x27;)</td>
+        <td>818</td>
+    </tr>
+    <tr>
+        <td>(&#x27;dragonballz&#x27;, &#x27;gohanandgoten&#x27;, &#x27;nationalsiblingsday&#x27;)</td>
+        <td>643</td>
+    </tr>
+    <tr>
+        <td>(&#x27;clothes&#x27;, &#x27;nationalsiblingday&#x27;, &#x27;win&#x27;)</td>
+        <td>484</td>
+    </tr>
+    <tr>
+        <td>(&#x27;boohoo&#x27;, &#x27;clothes&#x27;, &#x27;nationalsiblingday&#x27;)</td>
+        <td>483</td>
+    </tr>
+    <tr>
+        <td>(&#x27;boohoo&#x27;, &#x27;clothes&#x27;, &#x27;win&#x27;)</td>
+        <td>482</td>
+    </tr>
+    <tr>
+        <td>(&#x27;equalpayday&#x27;, &#x27;nationalsiblingsday&#x27;, &#x27;tuesdaythoughts&#x27;)</td>
+        <td>293</td>
     </tr>
 </table>
