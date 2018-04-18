@@ -28,3 +28,12 @@ But these smaller files cannot be read directly into jupyter due to their incomp
 To check whether these files are complete as json lists and also get to know the length of each file, I used (bash command):
 `jq '. | length' SmallFileName`. When checked by this command, there was some parse error or EOF with some small files, and I found that it was because `"` at the beginning or the end was reformatted into `“` or `”`. These quotation marks had to be formatted back. I did it manually, but I know it is better to write codes for this task and I will update on this soon.
 
+### Text Analyses
+Before identifying siblings using the data, I would like to know what the users were talking about when they tweeted about National Siblings Day, using text analyses. Before analyses, I expected that possibilities include:
+  * individual human users mentioned their siblings on Twitter and celebrate the day,
+  * individual human users post past pictures with their siblings in memory of their experiences,
+  * non-human accounts celebrate the day for example, by mentioning how siblings are precious,
+  * non-human bussiness accounts make promotions for this day.
+Text analyses conducted include:
+  * 
+
