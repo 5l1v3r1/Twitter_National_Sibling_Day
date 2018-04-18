@@ -39,6 +39,97 @@ Text analyses conducted include:
   * descriptives of the hashtags, including occurrences and co-occurrences (i.e., bigrams, trigrams) of hashtags,
   * descriptives of the tweets' content, including 
        * word frequency and ngrams frequency, 
-       * topic modeling- LDA
-       * word clustering analyses - k-means
+       * topic modeling- LDA,
+       * word clustering analyses - k-means.
 
+## Results
+### Text Analyses: Hashtags
+Hashtags extracted from all the tweets include 329,479 single hashtags, 182,753 bigrams, and 68,185 trigrams
+*Occurrences of single hashtags* <br />
+The 20 most frequent hashtags among the tweets are:
+<table>
+    <tr>
+        <th>Hashtag</th>
+        <th>Count</th>
+    </tr>
+    <tr>
+        <td>nationalsiblingsday</td>
+        <td>157375</td>
+    </tr>
+    <tr>
+        <td>nationalsiblingday</td>
+        <td>39878</td>
+    </tr>
+    <tr>
+        <td>blackpanther</td>
+        <td>9828</td>
+    </tr>
+    <tr>
+        <td>shuri</td>
+        <td>7037</td>
+    </tr>
+    <tr>
+        <td>strangerthings</td>
+        <td>6609</td>
+    </tr>
+    <tr>
+        <td>incredibles2</td>
+        <td>4399</td>
+    </tr>
+    <tr>
+        <td>starwars</td>
+        <td>4182</td>
+    </tr>
+    <tr>
+        <td>supernatural</td>
+        <td>4038</td>
+    </tr>
+    <tr>
+        <td>siblingsday</td>
+        <td>3670</td>
+    </tr>
+    <tr>
+        <td>premiosmtvmiaw</td>
+        <td>3132</td>
+    </tr>
+    <tr>
+        <td>mtvbrkpopbts</td>
+        <td>2762</td>
+    </tr>
+    <tr>
+        <td>siblingday</td>
+        <td>1537</td>
+    </tr>
+    <tr>
+        <td>siblings</td>
+        <td>1244</td>
+    </tr>
+    <tr>
+        <td>zuckerberg</td>
+        <td>1148</td>
+    </tr>
+    <tr>
+        <td>tuesdaythoughts</td>
+        <td>1104</td>
+    </tr>
+    <tr>
+        <td>family</td>
+        <td>1013</td>
+    </tr>
+    <tr>
+        <td>theoriginals</td>
+        <td>994</td>
+    </tr>
+    <tr>
+        <td>mciliv</td>
+        <td>909</td>
+    </tr>
+    <tr>
+        <td>cskvkkr</td>
+        <td>887</td>
+    </tr>
+    <tr>
+        <td>resist</td>
+        <td>832</td>
+    </tr>
+</table>
