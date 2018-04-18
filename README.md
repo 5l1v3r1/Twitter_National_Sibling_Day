@@ -36,5 +36,9 @@ Before identifying siblings using the data, I would like to know what the users 
   * non-human bussiness accounts make promotions for this day.
 
 Text analyses conducted include:
-  * 
+  * descriptives of the hashtags, including occurrences and co-occurrences (i.e., bigrams, trigrams) of hashtags,
+  * descriptives of the tweets' content, including 
+       * word frequency and ngrams frequency, 
+       * topic modeling- LDA
+       * word clustering analyses - k-means
 
