@@ -270,5 +270,5 @@ Other hashtags, however, seemed confounding with the National Siblings Day:
        * 'Shout out to all the Only Childs on #NationalSiblingsDay 🙌🏻\nRemember in French it is said “Je suis fille unique”, it’s good to be unique. It’s not our fault that our parents realised they couldn’t improve on perfection 🤷🏻\u200d♀️ #onlychild',
       * 'Hey Twitter Good Tuesday morning 🐣🐰 Happy national sibling day 👪to everyone who has siblings sincerely from #onlychild'.
 
-Therefore, before the analyses of users and user mentions, I deleted tweets that had these groups of confounding/irrelevant hashtags.
+Therefore, before the analyses of users and user mentions, I deleted tweets that had these groups of confounding/ irrelevant hashtags.
 
