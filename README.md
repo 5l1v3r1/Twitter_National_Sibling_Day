@@ -258,6 +258,17 @@ The four most frequent single hashtags are #nationalsiblingsday, #nationalsiblin
     </tr>
 </table>
 
-From these hashtags, first we could infer that some tweets can be sibling and/or family themed-- those that include #siblings, #family, #sister(s), #brother(s), and #love, and these hashtags tended to co-occur. Other hashtags, however, seemed confounding with the National Siblings Day. One theme is with the #equalpayday, because April 10 also happened to be the Equal Pay Day, and this hashtag tended to co-occur with #tuesdaythoughts #lifecouldbeeasier. Another group of co-occurring hashtags included #brochure, #rack, #flyer, and #roll. Other random hashtags that appeared in the top trigrams (e.g., #michaelcohen, #mondaymotivation, #fcbsfc) looked confusing first, but when I looked into the tweets with these hashtags, I found that those tweets seemed to come from bots and the entire piece of tweets consisted of all kinds of hashtags, for example: '#NationalSiblingsDay\n#FelizMartes\n#temblor\n#CBX_BloomingDays\n#MondayMotivation\n#fft18\n#fcbsfc\n#asiaafricacarnival2018\n#GusIpulMbakPuti\n#PersijaDay\n#CSKvKKR\n#BlackberrysKeepRising\nA great account ❤️👌🏻 A must to follow 😁 \nTwitter: @s_alqhtani7 \nSnap:https://t.co/PYNDtvIx7O'. <br />
+From these hashtags, first we could infer that some tweets can be sibling and/or family themed-- those that include #siblings, #family, #sister(s), #brother(s), and #love, and these hashtags tended to co-occur. 
+
+Other hashtags, however, seemed confounding with the National Siblings Day:
+   * One theme is with the #equalpayday, because April 10 also happened to be the Equal Pay Day, and this hashtag tended to co-occur with #tuesdaythoughts #lifecouldbeeasier. 
+   * Another group of co-occurring hashtags included #brochure, #rack, #flyer, and #roll. 
+   * Other random hashtags that appeared in the top trigrams (e.g., #michaelcohen, #mondaymotivation, #fcbsfc) looked confusing first, but when I looked into the tweets with these hashtags, I found that those tweets seemed to come from bots and the entire piece of tweets consisted of all kinds of hashtags, for example:
+       * '#NationalSiblingsDay\n#FelizMartes\n#temblor\n#CBX_BloomingDays\n#MondayMotivation\n#fft18\n#fcbsfc\n#asiaafricacarnival2018\n#GusIpulMbakPuti\n#PersijaDay\n#CSKvKKR\n#BlackberrysKeepRising\nA great account ❤️👌🏻 A must to follow 😁 \nTwitter: @s_alqhtani7 \nSnap:https://t.co/PYNDtvIx7O'. <br />
+   * Another confounding single hashtag is #onlychild. Only children tweeted about National Siblings Day to express their wishes about having siblings, seek compassion from other only children, or highlight their identities as only children. For example:
+       * 'Wish I had one #NationalSiblingsDay #onlychild #boo https://t.co/IDH5w2dr6X',
+       * 'Shout out to all the Only Childs on #NationalSiblingsDay 🙌🏻\nRemember in French it is said “Je suis fille unique”, it’s good to be unique. It’s not our fault that our parents realised they couldn’t improve on perfection 🤷🏻\u200d♀️ #onlychild',
+      * 'Hey Twitter Good Tuesday morning 🐣🐰 Happy national sibling day 👪to everyone who has siblings sincerely from #onlychild'.
+
 Therefore, before the analyses of users and user mentions, I deleted tweets that had these groups of confounding/irrelevant hashtags.
 
