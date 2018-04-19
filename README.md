@@ -118,26 +118,6 @@ The four most frequent single hashtags are #nationalsiblingsday, #nationalsiblin
         <td>roll</td>
         <td>237</td>
     </tr>
-    <tr>
-        <td>throwback</td>
-        <td>169</td>
-    </tr>
-    <tr>
-        <td>americanidol</td>
-        <td>156</td>
-    </tr>
-    <tr>
-        <td>cbx_bloomingdays</td>
-        <td>154</td>
-    </tr>
-    <tr>
-        <td>foodasitcom</td>
-        <td>153</td>
-    </tr>
-    <tr>
-        <td>siblinglove</td>
-        <td>149</td>
-    </tr>
 </table>
 
 *Occurrences of hashtag bigrams* <br />
