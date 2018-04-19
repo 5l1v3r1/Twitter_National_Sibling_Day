@@ -42,193 +42,238 @@ Text analyses conducted include:
        * topic modeling- LDA,
        * word clustering analyses - k-means.
 
+In the analyses, I was only interested in what people were *tweeting*, but not *retweeting*, given that popular accounts with tweets that have been retweeted many times can be extremely overrepresentative in the sampled tweets. I also got rid of tweets that were identified as in languages other than English. These two subsetting rules resulted in 132,469 tweets for text analyses.
+
+The corresponding code file is `01_text_analyses.ipynb`.
+
 ## Results
 ### Text Analyses: Hashtags
-Hashtags extracted from all the tweets include 329,479 single hashtags, 182,753 bigrams, and 68,185 trigrams
+Hashtags extracted from all the tweets include 101,525 single hashtags, 62,612 bigrams, and 31,328 trigrams.
+The four most frequent single hashtags are #nationalsiblingsday, #nationalsiblingday, #siblingsday, and #siblingday. To make a better representation of other hashtags, I deleted those four from the single hashtag list and bigrams and trigrams that contain any of these four hashtags. With this exclusion criterion, the 15 most frequent occurring single hashtags, bigrams, and trigrams are displayed below respectively.
 
 *Occurrences of single hashtags* <br />
-The 20 most frequent hashtags among the tweets are:
+
 <table>
     <tr>
-        <th>Hashtag</th>
+        <th>Single Hashtag</th>
         <th>Count</th>
     </tr>
     <tr>
-        <td>nationalsiblingsday</td>
-        <td>157375</td>
-    </tr>
-    <tr>
-        <td>nationalsiblingday</td>
-        <td>39878</td>
-    </tr>
-    <tr>
-        <td>blackpanther</td>
-        <td>9828</td>
-    </tr>
-    <tr>
-        <td>shuri</td>
-        <td>7037</td>
-    </tr>
-    <tr>
-        <td>strangerthings</td>
-        <td>6609</td>
-    </tr>
-    <tr>
-        <td>incredibles2</td>
-        <td>4399</td>
-    </tr>
-    <tr>
-        <td>starwars</td>
-        <td>4182</td>
-    </tr>
-    <tr>
-        <td>supernatural</td>
-        <td>4038</td>
-    </tr>
-    <tr>
-        <td>siblingsday</td>
-        <td>3670</td>
-    </tr>
-    <tr>
-        <td>premiosmtvmiaw</td>
-        <td>3132</td>
-    </tr>
-    <tr>
-        <td>mtvbrkpopbts</td>
-        <td>2762</td>
-    </tr>
-    <tr>
-        <td>siblingday</td>
-        <td>1537</td>
-    </tr>
-    <tr>
         <td>siblings</td>
-        <td>1244</td>
-    </tr>
-    <tr>
-        <td>zuckerberg</td>
-        <td>1148</td>
-    </tr>
-    <tr>
-        <td>tuesdaythoughts</td>
-        <td>1104</td>
+        <td>1000</td>
     </tr>
     <tr>
         <td>family</td>
-        <td>1013</td>
+        <td>765</td>
     </tr>
     <tr>
-        <td>theoriginals</td>
-        <td>994</td>
+        <td>tuesdaythoughts</td>
+        <td>695</td>
     </tr>
     <tr>
-        <td>mciliv</td>
-        <td>909</td>
+        <td>sisters</td>
+        <td>649</td>
     </tr>
     <tr>
-        <td>cskvkkr</td>
-        <td>887</td>
+        <td>equalpayday</td>
+        <td>603</td>
     </tr>
     <tr>
-        <td>resist</td>
-        <td>832</td>
+        <td>brothers</td>
+        <td>456</td>
+    </tr>
+    <tr>
+        <td>love</td>
+        <td>365</td>
+    </tr>
+    <tr>
+        <td>zuckerberg</td>
+        <td>364</td>
+    </tr>
+    <tr>
+        <td>sister</td>
+        <td>352</td>
+    </tr>
+    <tr>
+        <td>flyer</td>
+        <td>294</td>
+    </tr>
+    <tr>
+        <td>brochure</td>
+        <td>291</td>
+    </tr>
+    <tr>
+        <td>brother</td>
+        <td>280</td>
+    </tr>
+    <tr>
+        <td>rack</td>
+        <td>268</td>
+    </tr>
+    <tr>
+        <td>onlychild</td>
+        <td>243</td>
+    </tr>
+    <tr>
+        <td>roll</td>
+        <td>237</td>
+    </tr>
+    <tr>
+        <td>throwback</td>
+        <td>169</td>
+    </tr>
+    <tr>
+        <td>americanidol</td>
+        <td>156</td>
+    </tr>
+    <tr>
+        <td>cbx_bloomingdays</td>
+        <td>154</td>
+    </tr>
+    <tr>
+        <td>foodasitcom</td>
+        <td>153</td>
+    </tr>
+    <tr>
+        <td>siblinglove</td>
+        <td>149</td>
     </tr>
 </table>
 
 *Occurrences of hashtag bigrams* <br />
-The 10 most frequent hashtag bigrams among the tweets are:
+
 <table>
     <tr>
-        <th>Hashtag</th>
+        <th>Hashtag Bigrams</th>
         <th>Count</th>
     </tr>
     <tr>
-        <td>(&#x27;blackpanther&#x27;, &#x27;nationalsiblingsday&#x27;)</td>
-        <td>9813</td>
+        <td>(&#x27;brochure&#x27;, &#x27;flyer&#x27;)</td>
+        <td>290</td>
     </tr>
     <tr>
-        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;shuri&#x27;)</td>
-        <td>7035</td>
+        <td>(&#x27;flyer&#x27;, &#x27;rack&#x27;)</td>
+        <td>268</td>
     </tr>
     <tr>
-        <td>(&#x27;blackpanther&#x27;, &#x27;shuri&#x27;)</td>
-        <td>7030</td>
+        <td>(&#x27;brochure&#x27;, &#x27;rack&#x27;)</td>
+        <td>268</td>
     </tr>
     <tr>
-        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;strangerthings&#x27;)</td>
-        <td>6607</td>
+        <td>(&#x27;equalpayday&#x27;, &#x27;tuesdaythoughts&#x27;)</td>
+        <td>260</td>
     </tr>
     <tr>
-        <td>(&#x27;incredibles2&#x27;, &#x27;nationalsiblingsday&#x27;)</td>
-        <td>4387</td>
+        <td>(&#x27;brochure&#x27;, &#x27;roll&#x27;)</td>
+        <td>236</td>
     </tr>
     <tr>
-        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;starwars&#x27;)</td>
-        <td>4164</td>
+        <td>(&#x27;flyer&#x27;, &#x27;roll&#x27;)</td>
+        <td>236</td>
     </tr>
     <tr>
-        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;supernatural&#x27;)</td>
-        <td>3935</td>
+        <td>(&#x27;rack&#x27;, &#x27;roll&#x27;)</td>
+        <td>236</td>
     </tr>
     <tr>
-        <td>(&#x27;mtvbrkpopbts&#x27;, &#x27;premiosmtvmiaw&#x27;)</td>
-        <td>2758</td>
+        <td>(&#x27;family&#x27;, &#x27;siblings&#x27;)</td>
+        <td>168</td>
     </tr>
     <tr>
-        <td>(&#x27;nationalsiblingsday&#x27;, &#x27;premiosmtvmiaw&#x27;)</td>
-        <td>1455</td>
+        <td>(&#x27;equalpayday&#x27;, &#x27;zuckerberg&#x27;)</td>
+        <td>167</td>
     </tr>
     <tr>
-        <td>(&#x27;mtvbrkpopbts&#x27;, &#x27;nationalsiblingsday&#x27;)</td>
-        <td>1439</td>
+        <td>(&#x27;americanidol&#x27;, &#x27;foodasitcom&#x27;)</td>
+        <td>152</td>
+    </tr>
+    <tr>
+        <td>(&#x27;americanidol&#x27;, &#x27;marilynmonday&#x27;)</td>
+        <td>148</td>
+    </tr>
+    <tr>
+        <td>(&#x27;foodasitcom&#x27;, &#x27;marilynmonday&#x27;)</td>
+        <td>148</td>
+    </tr>
+    <tr>
+        <td>(&#x27;family&#x27;, &#x27;love&#x27;)</td>
+        <td>144</td>
+    </tr>
+    <tr>
+        <td>(&#x27;brother&#x27;, &#x27;sister&#x27;)</td>
+        <td>142</td>
+    </tr>
+    <tr>
+        <td>(&#x27;lifecouldbeeasierif&#x27;, &#x27;tuesdaythoughts&#x27;)</td>
+        <td>126</td>
     </tr>
 </table>
 
 *Occurrences of hashtag trigrams* <br />
-The 10 most frequent hashtag trigrams among the tweets are:
+
 <table>
     <tr>
-        <th>Hashtag</th>
+        <th>Hashtag Trigrams</th>
         <th>Count</th>
     </tr>
     <tr>
-        <td>(&#x27;blackpanther&#x27;, &#x27;nationalsiblingsday&#x27;, &#x27;shuri&#x27;)</td>
-        <td>7026</td>
+        <td>(&#x27;brochure&#x27;, &#x27;flyer&#x27;, &#x27;rack&#x27;)</td>
+        <td>268</td>
     </tr>
     <tr>
-        <td>(&#x27;mtvbrkpopbts&#x27;, &#x27;nationalsiblingsday&#x27;, &#x27;premiosmtvmiaw&#x27;)</td>
-        <td>1424</td>
+        <td>(&#x27;flyer&#x27;, &#x27;rack&#x27;, &#x27;roll&#x27;)</td>
+        <td>236</td>
     </tr>
     <tr>
-        <td>(&#x27;mciliv&#x27;, &#x27;resist&#x27;, &#x27;soros&#x27;)</td>
-        <td>818</td>
+        <td>(&#x27;brochure&#x27;, &#x27;flyer&#x27;, &#x27;roll&#x27;)</td>
+        <td>236</td>
     </tr>
     <tr>
-        <td>(&#x27;cskvkkr&#x27;, &#x27;mciliv&#x27;, &#x27;soros&#x27;)</td>
-        <td>818</td>
+        <td>(&#x27;americanidol&#x27;, &#x27;foodasitcom&#x27;, &#x27;marilynmonday&#x27;)</td>
+        <td>148</td>
     </tr>
     <tr>
-        <td>(&#x27;cskvkkr&#x27;, &#x27;mciliv&#x27;, &#x27;resist&#x27;)</td>
-        <td>818</td>
+        <td>(&#x27;equalpayday&#x27;, &#x27;lifecouldbeeasierif&#x27;, &#x27;tuesdaythoughts&#x27;)</td>
+        <td>97</td>
     </tr>
     <tr>
-        <td>(&#x27;dragonballz&#x27;, &#x27;gohanandgoten&#x27;, &#x27;nationalsiblingsday&#x27;)</td>
-        <td>643</td>
+        <td>(&#x27;cbx_bloomingdays&#x27;, &#x27;felizmartes&#x27;, &#x27;temblor&#x27;)</td>
+        <td>97</td>
     </tr>
     <tr>
-        <td>(&#x27;clothes&#x27;, &#x27;nationalsiblingday&#x27;, &#x27;win&#x27;)</td>
-        <td>484</td>
+        <td>(&#x27;cbx_bloomingdays&#x27;, &#x27;mondaymotivation&#x27;, &#x27;temblor&#x27;)</td>
+        <td>81</td>
     </tr>
     <tr>
-        <td>(&#x27;boohoo&#x27;, &#x27;clothes&#x27;, &#x27;nationalsiblingday&#x27;)</td>
-        <td>483</td>
+        <td>(&#x27;felizmartes&#x27;, &#x27;mondaymotivation&#x27;, &#x27;temblor&#x27;)</td>
+        <td>81</td>
     </tr>
     <tr>
-        <td>(&#x27;boohoo&#x27;, &#x27;clothes&#x27;, &#x27;win&#x27;)</td>
-        <td>482</td>
+        <td>(&#x27;americanidol&#x27;, &#x27;foodasitcom&#x27;, &#x27;michaelcohen&#x27;)</td>
+        <td>80</td>
     </tr>
     <tr>
-        <td>(&#x27;equalpayday&#x27;, &#x27;nationalsiblingsday&#x27;, &#x27;tuesdaythoughts&#x27;)</td>
-        <td>293</td>
+        <td>(&#x27;foodasitcom&#x27;, &#x27;marilynmonday&#x27;, &#x27;michaelcohen&#x27;)</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>(&#x27;fcbsfc&#x27;, &#x27;fft18&#x27;, &#x27;mondaymotivation&#x27;)</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>(&#x27;cbx_bloomingdays&#x27;, &#x27;fft18&#x27;, &#x27;temblor&#x27;)</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>(&#x27;cbx_bloomingdays&#x27;, &#x27;fcbsfc&#x27;, &#x27;mondaymotivation&#x27;)</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>(&#x27;felizmartes&#x27;, &#x27;fft18&#x27;, &#x27;temblor&#x27;)</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>(&#x27;fcbsfc&#x27;, &#x27;felizmartes&#x27;, &#x27;temblor&#x27;)</td>
+        <td>80</td>
     </tr>
 </table>
