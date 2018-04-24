@@ -285,9 +285,14 @@ And I tokenized each tweet text into a list of words, transformed all the words 
 First, with the cleaned word tokens, I counted the occurences of each single word (i.e., unigrams), and co-occurences of words, including bigrams and trigrams.
 
 * Unigrams <br>
-Blow is the wordcloud for unigrams. The most common unigrams, unsurprisingly, were 'sibl' (stem for sibling(s)), 'day', 'happi (stem for 'happy'), 'nation', 'broter', and 'sister). Example for other common unigrams include stemmed words for family, celebrate/celebration, thank, and friend, and emojies including '😂''💕''😘'.
+Blow is the wordcloud for unigrams. The most common unigrams, unsurprisingly, were 'sibl' (stem for sibling(s)), 'day', 'happi (stem for 'happy'), 'nation', 'broter', and 'sister). Example for other common unigrams include stemmed words for family, celebrate/celebration, thank, and friend, and emojies including '❤' '😂''💕''😘'. However, I did not find any irrelevant common unigrams in the list of 50 most frequent unigrams.
 ![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/Text_Unigram_WordCloud.png)
 
 * Bigrams <br>
+Blow is the wordcloud for bigrams. The most common bigrams, unsurprisingly, were combinations in "happy national sibling day". Other comon bigrams included "brother sister", "little/big brother/sister", "best friend", "love much", "day ❤". However, I did not find any irrelevant common bigrams in the list of 50 frequent bigrams.
+![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/Text_Bigram_WordCloud.png)
 
+* Trigrams <br>
+Blow is the wordcloud for trigrams. The most common trigrams, unsurprisingly, were combinations in "happy national sibling day". Other comon trigrams included "sibling day love/best/brother/❤/sister/💕", '😂 😂 😂'. Again, I did not find any irrelevant common unigrams in the list of 50 frequent bigrams.
 
+In sum, analyses in this section could not help me rule out irrelevant tweets for identifying sibling dyads.
