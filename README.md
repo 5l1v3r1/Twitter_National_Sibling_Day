@@ -39,12 +39,13 @@ Text analyses conducted include:
   * descriptives of the hashtags, including occurrences and co-occurrences (i.e., bigrams, trigrams) of hashtags,
   * descriptives of the tweets' content, including 
        * word frequency and ngrams frequency, 
-       * topic modeling- LDA,
-       * word clustering analyses - k-means.
+       * topic modeling,
+       * sentiment analyses.
 
 In the analyses, I was only interested in what people were *tweeting*, but not *retweeting*, given that popular accounts with tweets that have been retweeted many times can be extremely overrepresentative in the sampled tweets. I also got rid of tweets that were identified as in languages other than English. These two subsetting rules resulted in 132,469 tweets for text analyses.
 
-The corresponding code file is `01_text_analyses.ipynb`.
+The corresponding code file is `01_text_analyses.ipynb`. <br>
+I used the `nltk` and `genism` python package for text analyses.
 
 ## Results
 ### Text Analyses: Hashtags
@@ -295,6 +296,9 @@ Blow is the wordcloud for bigrams. The most common bigrams, unsurprisingly, were
 * Trigrams <br>
 Blow is the wordcloud for trigrams. The most common trigrams, unsurprisingly, were combinations in "happy national sibling day". Other comon trigrams included "sibling day love/best/brother/❤/sister/💕", '😂 😂 😂'. Again, I did not find any irrelevant common unigrams in the list of 50 frequent bigrams.
 ![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/Text_Trigram_WordCloud.png)
+<br>
 In sum, analyses in this section could not help me rule out irrelevant tweets for identifying sibling dyads.
 
+#### 2. Topic Modeling- Latent Dirichlet allocation (LDA)
+Then I conducted topic modeling to find different topics among the tweets and check whether there were topics that were deviant from the National Siblings Day. I used latent dirichlet allocation (LPA) for topic modeling. LDA performs analyses with pre-determined number of topics. Because I did not know how many topics would fit the models the best prior to the analyses, I performed LDA with a range of number of topics from 1 to 20, and every time obtained two indices, *model complexity* and *topic coherence*, to find the best option(s) for number of topics. Lower model complexity and higher topic coherence indicate better topic models.
 
