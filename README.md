@@ -294,5 +294,7 @@ Blow is the wordcloud for bigrams. The most common bigrams, unsurprisingly, were
 
 * Trigrams <br>
 Blow is the wordcloud for trigrams. The most common trigrams, unsurprisingly, were combinations in "happy national sibling day". Other comon trigrams included "sibling day love/best/brother/❤/sister/💕", '😂 😂 😂'. Again, I did not find any irrelevant common unigrams in the list of 50 frequent bigrams.
-
+![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/Text_Trigram_WordCloud.png)
 In sum, analyses in this section could not help me rule out irrelevant tweets for identifying sibling dyads.
+
+
