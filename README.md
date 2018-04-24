@@ -272,3 +272,22 @@ Other hashtags, however, seemed confounding with the National Siblings Day:
 
 Therefore, before the analyses of users and user mentions, I deleted tweets that had these groups of confounding/ irrelevant hashtags.
 
+### Text Analyses: Tweet Content
+Then I extracted all the tweets text to conduct analyses based on the content. Before all the analyses, I eliminated all the following from the text:
+    * http urls
+    * words starting with '@' (i.e., mentions) and '#' (i.e., hashtags)
+    * 'RT' (term used for retweets)
+    * punctuations
+    * English stopwords (included in the nltk package)
+And I tokenized each tweet text into a list of words, transformed all the words to lower cases, and stemmed all the words so that same words in different formats would be (hopefully) changed into one same format.
+
+#### 1. Ngrams frequency analysis
+First, with the cleaned word tokens, I counted the occurences of each single word (i.e., unigrams), and co-occurences of words, including bigrams and trigrams.
+
+* Unigrams <br>
+Blow is the wordcloud for unigrams. The most common unigrams, unsurprisingly, were 'sibl' (stem for sibling(s)), 'day', 'happi (stem for 'happy'), 'nation', 'broter', and 'sister). Example for other common unigrams include stemmed words for family, celebrate/celebration, thank, and friend, and emojies including '😂''💕''😘'.
+![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/Text_Unigram_WordCloud.png)
+
+* Bigrams <br>
+
+
