@@ -7,7 +7,9 @@ This is a class project for Timothy Brick's HDFS 597 "Mining Internet with Pytho
 ## Study Background
 Siblings play important role in one another's development (Dunn, 1983; McHale, Updegraff, & Whiteman, 2012). Research on siblings has used global questionnaires and interviews to examine their relationships and interactions, mostly through *offline* activities. However, although social media has become an important part of many people's life, especially among youth and young adults (Pew Research Center, 2016), we know much less about how they interact *online*, including on social media (LeBouef & Dworkin, 2017). Twitter is a platform that people use for social networking and obtaining information (Zhao & Rosson, 2009). I use Twitter to examine sibling interactions online because it provides free, open source data through the API, and previous research has used data from Twitter to capture interactions between romantic partners (Garimella, Weber, & Cin, 2014).
 
-Identifying sibling users on Twitter can be time-consuming, involving a large amount of human annotation work (Sun, Chi, Yin, & McHale, in progress). However, the National Sibling Day on April 10 may allow us to identify sibling Twitter users in a more efficient way. On that day, #NationalSiblingsDay (and other similar hashtags) is a trending topic on Twitter, and people tend to tweet that topic and mention their siblings in the tweet. Therefore, collecting tweets about that topic on that particular day and utilizing a subset of those where one user mentions the other(s), we are likely to identify sibling users in a potentially reliable way.
+One important step to examine sibling interactions on Twitter is to identify siblings, but the identifying process can be time-consuming and expensive, involving a large amount of human annotation work (Sun, Chi, Yin, & McHale, in progress). However, the National Sibling Day on April 10 may allow us to identify sibling Twitter users in a more efficient way. On that day, #NationalSiblingsDay (and other similar hashtags) is a trending topic on Twitter, and people tend to tweet that topic and mention their siblings in the tweet. Therefore, collecting tweets about that topic on that particular day and utilizing a subset of those where one user mentions the other(s), we are likely to identify sibling users in a potentially reliable way.
+
+Accordingly, in this study, I obtained real-time tweets about National Siblings Day, and used text analysis to identify characteristics that could potentially be helpful to filter relevant tweets that potentially could help to identify sibling Twitter users. Using the characteristics, I filtered potentially relevant tweets, which I then used to identify siblings by the users' mentions in the tweets. With these users identified, I further filtered out the non-human users using BotCheck (Davis, Varol, Ferrara, Flammini, & Menczer, 2016). Finally, 
 
 ## Method
 ### Streaming Tweets about National Siblings Day
@@ -29,11 +31,7 @@ To check whether these files are complete as json lists and also get to know the
 `jq '. | length' SmallFileName`. When checked by this command, there was some parse error or EOF with some small files, and I found that it was because `"` at the beginning or the end was reformatted into `“` or `”`. These quotation marks had to be formatted back. I did it manually, but I know it is better to write codes for this task and I will update on this soon.
 
 ### Text Analyses
-Before identifying siblings using the data, I would like to know what the users were talking about when they tweeted about National Siblings Day, using text analyses. Before analyses, I expected that possibilities include:
-  * individual human users mentioned their siblings on Twitter and celebrate the day,
-  * individual human users post past pictures with their siblings in memory of their experiences,
-  * non-human accounts celebrate the day for example, by mentioning how siblings are precious,
-  * non-human bussiness accounts make promotions for this day.
+Before identifying siblings using the data, I examined what the the users were talking about when they tweeted about National Siblings Day, using text analyses. This procedure was mainly for identifying irrelevant or confounding tweets in the dataset where users were not very possible talking about, especially mentioning their siblings. Characteristics, including hashtags, keywords, and topics, found in this procedure could be used as selection criteria to filter out confounding tweets and keep those that would be relevant.
 
 Text analyses conducted include:
   * descriptives of the hashtags, including occurrences and co-occurrences (i.e., bigrams, trigrams) of hashtags,
@@ -302,4 +300,7 @@ In sum, analyses in this section could not help me rule out irrelevant tweets fo
 #### 2. Topic Modeling- Latent Dirichlet allocation (LDA)
 Then I conducted topic modeling to find different topics among the tweets and check whether there were topics that were deviant from the National Siblings Day. I used latent dirichlet allocation (LPA) for topic modeling. LDA performs analyses with pre-determined number of topics. Because I did not know how many topics would fit the models the best prior to the analyses, I performed LDA with a range of number of topics from 1 to 20, and every time obtained two indices, *model perplexity* and *topic coherence*, to find the best option(s) for number of topics. Lower model perplexity and higher topic coherence indicate better topic models.
 
-Below are the model perplexities and topic coherences for each number of topics predifined for LDA. As shown, model perplexity descreased from 3 to 20 topics, whereas topic coherences peaked at the model with 4 topics and 11 topics. Therefore, I further looked into the 4-topic and 11-topic models for the specific topics that these models found.
+Below are the model perplexities and topic coherences for each number of topics predifined for LDA. As shown, model perplexity descreased from 3 to 20 topics, whereas topic coherences peaked at the model with 4 topics and 11 topics. Therefore, I further looked into the 4-topic, 11-topic, and 20-topic models for the specific topics that these models found.
+
+![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/LDA_perplexity.png)
+![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/LDA_coherence.png)
