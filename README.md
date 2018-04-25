@@ -9,7 +9,7 @@ Siblings play important role in one another's development (Dunn, 1983; McHale, U
 
 One important step to examine sibling interactions on Twitter is to identify siblings, but the identifying process can be time-consuming and expensive, involving a large amount of human annotation work (Sun, Chi, Yin, & McHale, in progress). However, the National Sibling Day on April 10 may allow us to identify sibling Twitter users in a more efficient way. On that day, #NationalSiblingsDay (and other similar hashtags) is a trending topic on Twitter, and people tend to tweet that topic and mention their siblings in the tweet. Therefore, collecting tweets about that topic on that particular day and utilizing a subset of those where one user mentions the other(s), we are likely to identify sibling users in a potentially reliable way.
 
-Accordingly, in this study, I obtained real-time tweets about National Siblings Day, and used text analysis to identify characteristics that could potentially be helpful to filter relevant tweets that potentially could help to identify sibling Twitter users. Using the characteristics, I filtered potentially relevant tweets, which I then used to identify siblings by the users' mentions in the tweets. With these users identified, I further filtered out the non-human users using BotCheck (Davis, Varol, Ferrara, Flammini, & Menczer, 2016). Finally, 
+Accordingly, in this study, I obtained real-time tweets about National Siblings Day, and used text analysis to identify characteristics that could potentially be helpful to filter relevant tweets that potentially could help to identify sibling Twitter users. Using the characteristics, I filtered potentially relevant tweets, which I then used to identify siblings by the users' mentions in the tweets. With these users identified, I further filtered out the non-human sibling users using BotCheck (Davis, Varol, Ferrara, Flammini, & Menczer, 2016). Finally, to assess the validity of my method for identifying sibling users, I randomly selected a proportion of all the identified sibling users and manually annotated them as siblings vs not siblings, based on their tweets and Twitter profiles, and calculated the percentage of the human-annotated sibling users as index for validity.
 
 ## Method
 ### Streaming Tweets about National Siblings Day
@@ -304,3 +304,13 @@ Below are the model perplexities and topic coherences for each number of topics 
 
 ![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/LDA_perplexity.png)
 ![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/LDA_coherence.png)
+<br>
+
+
+* 4-Topic Model
+Keywords generated for each topic of the 4-topic LDA model are:
+   * __Topic 1__: 0.061*"love" + 0.045*"sister" + 0.041*"brother" + 0.039*"happi" + 0.026*"best" + 0.025*"…" + 0.018*"littl" + 0.016*"thank" + 0.015*"much" + 0.015*"alway"
+   * __Topic 2__: 0.187*"day" + 0.171*"sibl" + 0.120*"nation" + 0.106*"happi" + 0.053*"️" + 0.041*"❤" + 0.018*"love" + 0.015*"…" + 0.011*"\u200d" + 0.008*"sib"
+   * __Topic 3__: 0.028*"research" + 0.017*"keyword" + 0.012*"celebr" + 0.006*"new" + 0.006*"2018" + 0.006*"profession" + 0.006*"–" + 0.006*"market" + 0.006*"competitor" + 0.006*"digit"
+   * __Topic 4__: 0.033*"sibl" + 0.024*"post" + 0.020*"..." + 0.020*"brother" + 0.018*"like" + 0.018*"😂" + 0.015*"sister" + 0.015*"one" + 0.011*"pictur" + 0.010*"pic" <br>
+Among these four topics, Topic 3 seems irrelevant to the National Sibilngs Day and least likely to include tweets where users mention their siblings. Therefore, I extracted tweets that include any of the word in the list ['research', 'keyword', 'profession', 'market', 'competitor', 'digit']
