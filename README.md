@@ -260,7 +260,7 @@ The four most frequent single hashtags are #nationalsiblingsday, #nationalsiblin
 From these hashtags, first we could infer that some tweets can be sibling and/or family themed-- those that include #siblings, #family, #sister(s), #brother(s), and #love, and these hashtags tended to co-occur. 
 
 Other hashtags, however, seemed confounding with the National Siblings Day:
-   * One theme is with the #equalpayday, because April 10 also happened to be the Equal Pay Day, and this hashtag tended to co-occur with #tuesdaythoughts #lifecouldbeeasier. 
+   * One theme is with the #equalpayday, because April 10 also happened to be the Equal Pay Day, and this hashtag tended to co-occur with #tuesdaythoughts #lifecouldbeeasier #zuckerberg. 
    * Another group of co-occurring hashtags included #brochure, #rack, #flyer, and #roll. 
    * Other random hashtags that appeared in the top trigrams (e.g., #michaelcohen, #mondaymotivation, #fcbsfc) looked confusing first, but when I looked into the tweets with these hashtags, I found that those tweets seemed to come from bots and the entire piece of tweets consisted of all kinds of hashtags, for example:
        * '#NationalSiblingsDay\n#FelizMartes\n#temblor\n#CBX_BloomingDays\n#MondayMotivation\n#fft18\n#fcbsfc\n#asiaafricacarnival2018\n#GusIpulMbakPuti\n#PersijaDay\n#CSKvKKR\n#BlackberrysKeepRising\nA great account ❤️👌🏻 A must to follow 😁 \nTwitter: @s_alqhtani7 \nSnap:https://t.co/PYNDtvIx7O'. <br />
@@ -300,7 +300,7 @@ In sum, analyses in this section could not help me rule out irrelevant tweets fo
 #### 2. Topic Modeling- Latent Dirichlet allocation (LDA)
 Then I conducted topic modeling to find different topics among the tweets and check whether there were topics that were deviant from the National Siblings Day. I used latent dirichlet allocation (LPA) for topic modeling. LDA performs analyses with pre-determined number of topics. Because I did not know how many topics would fit the models the best prior to the analyses, I performed LDA with a range of number of topics from 1 to 20, and every time obtained two indices, *model perplexity* and *topic coherence*, to find the best option(s) for number of topics. Lower model perplexity and higher topic coherence indicate better topic models.
 
-Below are the model perplexities and topic coherences for each number of topics predifined for LDA. As shown, model perplexity descreased from 3 to 20 topics, whereas topic coherences peaked at the model with 4 topics and 11 topics. Therefore, I further looked into the 4-topic, 11-topic, and 20-topic models for the specific topics that these models found.
+Below are the model perplexities and topic coherences for each number of topics predifined for LDA. As shown, model perplexity descreased from 3 to 20 topics, whereas topic coherences was the highest with 4 topics. Therefore, I further looked into the 4-topic model for the specific topics that this model found.
 
 ![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/LDA_perplexity.png)
 ![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/LDA_coherence.png)
@@ -312,7 +312,27 @@ Keywords generated for each topic of the 4-topic LDA model are:
    * __Topic 1__: 0.061*"love" + 0.045*"sister" + 0.041*"brother" + 0.039*"happi" + 0.026*"best" + 0.025*"…" + 0.018*"littl" + 0.016*"thank" + 0.015*"much" + 0.015*"alway"
    * __Topic 2__: 0.187*"day" + 0.171*"sibl" + 0.120*"nation" + 0.106*"happi" + 0.053*"️" + 0.041*"❤" + 0.018*"love" + 0.015*"…" + 0.011*"\u200d" + 0.008*"sib"
    * __Topic 3__: 0.028*"research" + 0.017*"keyword" + 0.012*"celebr" + 0.006*"new" + 0.006*"2018" + 0.006*"profession" + 0.006*"–" + 0.006*"market" + 0.006*"competitor" + 0.006*"digit"
-   * __Topic 4__: 0.033*"sibl" + 0.024*"post" + 0.020*"..." + 0.020*"brother" + 0.018*"like" + 0.018*"😂" + 0.015*"sister" + 0.015*"one" + 0.011*"pictur" + 0.010*"pic" <br>
-Among these four topics, Topic 3 seems irrelevant to the National Sibilngs Day and least likely to include tweets where users mention their siblings. Therefore, I extracted tweets that include any of the word in the list ['research', 'keyword', 'profession', 'market', 'competitor', 'digit'] and at the same time do not include any of the irrelevant hashtags defined above, and below are some examples:
-   * 
-   
+   * __Topic 4__: 0.033*"sibl" + 0.024*"post" + 0.020*"..." + 0.020*"brother" + 0.018*"like" + 0.018*"😂" + 0.015*"sister" + 0.015*"one" + 0.011*"pictur" + 0.010*"pic" 
+<br>
+Among these four topics, Topic 3 seems irrelevant to the National Sibilngs Day and least likely to include tweets where users mention their siblings. Therefore, I extracted tweets that include any of the word in the list ['research', 'keyword', 'profession', 'market', 'competitor', 'digit'] and at the same time do not include any of the irrelevant hashtags defined above. After looking into some examples, I found that these tweets include:
+* Marketing tweets from business accounts that made some promotions using National Siblings Day. Examples are:
+   * "it’s Sibling Day today – we’ve got lots of siblings between us at Suki Marketing, some near, some far, but all dear. #siblingday #siblings #sisters"
+   * "There’s no better friends than siblings. The perfect combination of @Cummins X12 and X15 offers customers the Power of Choice for optimum performance, efficiency and weight savings in the heavy duty market. Happy Siblings Day!"
+   * "Happy National Siblings Day! You can't pick your siblings...but you can sure pick some sweet strawberries at #KingsFarmMarket"
+* Some random marketing tweets that are irrelevant to National Siblings Day but use this hashtag to attract views:
+   * "Be professional.Use eye catchy signature to your E-mail.\nYour Email Signature is more than just your name and title.\nplease visit https://t.co/dZRYLWiF7P to create email signature\n #NationalSiblingsDay"
+   * "#NationalSiblingsDay\nNeed a professional graphic designer?I am here.\n    #businesscard\n    #professional\n    #custom design\n    #double sided card\n    #uniqe\n    #graphics design\n\nI will make you for $5.\nPlease visit this link:https://t.co/QTqu36ezkk"
+   * "With all the speak within the #SEO world a small degree factor that happens to be the muse of #keyword_research. I say that while not #keywords , there isn't any such factor for your #SEO campaigns.https://t.co/BEzTWFTKUv \n#NationalSiblingsDay #GFA20 #CSKvKKR #LEGOIdea2018 #dkbiz https://t.co/IHr9NXrtTt""
+* Tweets about research related to siblings. Examples are:
+   * "Please help with our ASD and WS sibling research if you can.... #NationalSiblingDay"
+   * "Older male siblings are more emotionally stable &amp; socially outgoing, research finds: https://t.co/wpyPeYemRs #NationalSiblingsDay"
+   * "Research shows older siblings can actually increase the chances of their siblings living to adulthood\n#NationalSiblingsDay \nhttps://t.co/6YrUj52J9K via @sheffielduni"
+* Tweets about 'digital siblings' that are not real siblings. Examples are:
+   * "Do you have a favorite digital sibling? #NationalSiblingsDay \n\nMine is Charlie Sheen in major league 1989. @FunSheen @wesleysnipes @BerengerOnline #WildThing #Repost #Love #ChampionsLeague #JerseyShore #golfwang #Tyler #QTip #illmatic #NoDoubt #RIFFRAFF"
+   * " Happy to be part of this combo! Also, shoutout to the best Weber sibling, the digitally mysterious @WeberBegley! "
+* Some tweets, with keywords in this topic, however were about real siblings, and tended to be where users talked about how they were proud with their siblings. Examples are:
+   * "Happy national siblings day, @gbrenna! Here's a throwback to that one time we totally tricked mom into thinking we broke our arms. How we haven't turned into professional actors yet is beyond me\U0001f929 #siblingsforlife."
+   * If you have siblings and they are athletes too, then you know what I mean when I say Training Day is everyday, no matter the sport or the season. Happy #NationalSiblingsDay to my toughest competitors and best teammates."
+<br>
+Therefore, I shortened the topic 3 list to ['research', 'keyword', 'market','digit'] and used this list as one of the criteria for filtering out irrelevant tweets.
+<br>
