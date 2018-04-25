@@ -315,6 +315,7 @@ Keywords generated for each topic of the 4-topic LDA model are:
    * __Topic 4__: 0.033*"sibl" + 0.024*"post" + 0.020*"..." + 0.020*"brother" + 0.018*"like" + 0.018*"😂" + 0.015*"sister" + 0.015*"one" + 0.011*"pictur" + 0.010*"pic" 
 <br>
 Among these four topics, Topic 3 seems irrelevant to the National Sibilngs Day and least likely to include tweets where users mention their siblings. Therefore, I extracted tweets that include any of the word in the list ['research', 'keyword', 'profession', 'market', 'competitor', 'digit'] and at the same time do not include any of the irrelevant hashtags defined above. After looking into some examples, I found that these tweets include:
+
 * Marketing tweets from business accounts that made some promotions using National Siblings Day. Examples are:
    * "it’s Sibling Day today – we’ve got lots of siblings between us at Suki Marketing, some near, some far, but all dear. #siblingday #siblings #sisters"
    * "There’s no better friends than siblings. The perfect combination of @Cummins X12 and X15 offers customers the Power of Choice for optimum performance, efficiency and weight savings in the heavy duty market. Happy Siblings Day!"
