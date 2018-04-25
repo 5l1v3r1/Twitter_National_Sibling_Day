@@ -338,7 +338,7 @@ Therefore, I shortened the topic 3 list to ['research', 'keyword', 'market','dig
 <br>
 
 #### 3. Sentiment Analyses
-Finally for text analyses, I conducted sentiment analyses for the tweet content. I expected that irrelevant tweets would have different ranges of sentiment scores than the relevant tweets. Before sentiment analyses, I filtered out the irrelevant tweets that contained any of the irrelevant hashtags or keywords identified in prevoius sections, which resulted in 128,481 tweets in total for following analyses. <br>
-<br>
+Finally for text analyses, I conducted sentiment analyses for the tweet content. I expected that irrelevant tweets would have different ranges of sentiment scores than the relevant tweets. Before sentiment analyses, I filtered out the irrelevant tweets that contained any of the irrelevant hashtags or keywords identified in prevoius sections, which resulted in 128,481 tweets in total for following analyses. 
+
 Distributions of the sentiment scores, including compound, positive, negative, and neutral scores, are shown below.
 
