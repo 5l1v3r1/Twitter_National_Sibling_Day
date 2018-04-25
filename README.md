@@ -313,4 +313,6 @@ Keywords generated for each topic of the 4-topic LDA model are:
    * __Topic 2__: 0.187*"day" + 0.171*"sibl" + 0.120*"nation" + 0.106*"happi" + 0.053*"️" + 0.041*"❤" + 0.018*"love" + 0.015*"…" + 0.011*"\u200d" + 0.008*"sib"
    * __Topic 3__: 0.028*"research" + 0.017*"keyword" + 0.012*"celebr" + 0.006*"new" + 0.006*"2018" + 0.006*"profession" + 0.006*"–" + 0.006*"market" + 0.006*"competitor" + 0.006*"digit"
    * __Topic 4__: 0.033*"sibl" + 0.024*"post" + 0.020*"..." + 0.020*"brother" + 0.018*"like" + 0.018*"😂" + 0.015*"sister" + 0.015*"one" + 0.011*"pictur" + 0.010*"pic" <br>
-Among these four topics, Topic 3 seems irrelevant to the National Sibilngs Day and least likely to include tweets where users mention their siblings. Therefore, I extracted tweets that include any of the word in the list ['research', 'keyword', 'profession', 'market', 'competitor', 'digit']
+Among these four topics, Topic 3 seems irrelevant to the National Sibilngs Day and least likely to include tweets where users mention their siblings. Therefore, I extracted tweets that include any of the word in the list ['research', 'keyword', 'profession', 'market', 'competitor', 'digit'] and at the same time do not include any of the irrelevant hashtags defined above, and below are some examples:
+   * 
+   
