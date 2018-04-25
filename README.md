@@ -334,6 +334,11 @@ Among these four topics, Topic 3 seems irrelevant to the National Sibilngs Day a
 * Some tweets, with keywords in this topic, however were about real siblings, and tended to be where users talked about how they were proud with their siblings. Examples are:
    * "Happy national siblings day, @gbrenna! Here's a throwback to that one time we totally tricked mom into thinking we broke our arms. How we haven't turned into professional actors yet is beyond me\U0001f929 #siblingsforlife."
    * If you have siblings and they are athletes too, then you know what I mean when I say Training Day is everyday, no matter the sport or the season. Happy #NationalSiblingsDay to my toughest competitors and best teammates."
-<br>
 Therefore, I shortened the topic 3 list to ['research', 'keyword', 'market','digit'] and used this list as one of the criteria for filtering out irrelevant tweets.
 <br>
+
+#### 3. Sentiment Analyses
+Finally for text analyses, I conducted sentiment analyses for the tweet content. I expected that irrelevant tweets would have different ranges of sentiment scores than the relevant tweets. Before sentiment analyses, I filtered out the irrelevant tweets that contained any of the irrelevant hashtags or keywords identified in prevoius sections, which resulted in 128,481 tweets in total for following analyses. 
+
+Distributions of the sentiment scores, including compound, positive, negative, and neutral scores, are shown below.
+
