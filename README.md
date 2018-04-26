@@ -51,8 +51,8 @@ To idenify sibling users using the tweets that I streamed in, I took the followi
 * Second, select tweets where users mentioned other Twitter account(s) (e.g., @username), and the accounts mentioned in the tweets for National Siblings Day were likely to be the users' siblings; in this step, I could get raw data of groups (e.g., dyads, triads, etc.) of siblings;
 * Finally, filter out non-human users among the 'siblings' identified in the former step by means of botcheck using the [Botometer API] (https://github.com/sxrpsy/botcheck).
 
-The corresponding code file is `02_identify_siblings.ipynb`. 
-
+The corresponding code file for the first two steps is `02_identify_siblings.ipynb`. <br>
+The code file for botcheck is `03_botcheck.R`. 
 
 ## Results
 ### Text Analyses: Hashtags
