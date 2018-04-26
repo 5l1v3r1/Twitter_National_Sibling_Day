@@ -40,7 +40,7 @@ Text analyses conducted include:
        * topic modeling,
        * sentiment analyses.
 
-In the analyses, I was only interested in what people were *tweeting*, but not *retweeting*, given that popular accounts with tweets that have been retweeted many times can be extremely overrepresentative in the sampled tweets. I made this decision because my preliminary analyses with all the tweets, including retweets, found that the popular hashtags were predominantly about movies and/or TV shows, such as 'blackpanther' and '#strangerthings', probably people were excited about those shows and retweeted tweets from the shows' official accounts and relevant celebrities' tweets. I also got rid of tweets that were identified as in languages other than English. These two subsetting rules resulted in 132,469 tweets for text analyses.
+In the analyses, I was only interested in what people were *tweeting*, but not *retweeting*, given that popular accounts with tweets that have been retweeted many times can be extremely overrepresentative in the sampled tweets. I made this decision because my preliminary analyses with all the tweets, including retweets, found that the popular hashtags were predominantly about movies and/or TV shows, such as '#blackpanther' and '#strangerthings', probably people were excited about those shows and retweeted tweets from the shows' official accounts and relevant celebrities' tweets. I also got rid of tweets that were identified as in languages other than English. These two subsetting rules resulted in 132,469 tweets for text analyses.
 
 The corresponding code file is `01_text_analyses.ipynb`. <br>
 I used the `nltk` and `genism` python package for text analyses.
@@ -48,7 +48,7 @@ I used the `nltk` and `genism` python package for text analyses.
 ### Identify Sibling Users
 To idenify sibling users using the tweets that I streamed in, I took the following steps:
 * First, filter out irrelevant tweets using the filtering criteria determined with results of text analyses;
-* Second, select tweets where users mentioend other Twitter account(s) (e.g., @username), and the accounts mentioned in the tweets for National Siblings Day were likely to be the users' siblings; in this step, I could get raw data of groups (e.g., dyads, triads, etc.) of siblings;
+* Second, select tweets where users mentioned other Twitter account(s) (e.g., @username), and the accounts mentioned in the tweets for National Siblings Day were likely to be the users' siblings; in this step, I could get raw data of groups (e.g., dyads, triads, etc.) of siblings;
 * Finally, filter out non-human users among the 'siblings' identified in the former step by means of botcheck using the [Botometer API] (https://github.com/sxrpsy/botcheck).
 
 The corresponding code file is `02_identify_siblings.ipynb`. 
