@@ -40,10 +40,19 @@ Text analyses conducted include:
        * topic modeling,
        * sentiment analyses.
 
-In the analyses, I was only interested in what people were *tweeting*, but not *retweeting*, given that popular accounts with tweets that have been retweeted many times can be extremely overrepresentative in the sampled tweets. I also got rid of tweets that were identified as in languages other than English. These two subsetting rules resulted in 132,469 tweets for text analyses.
+In the analyses, I was only interested in what people were *tweeting*, but not *retweeting*, given that popular accounts with tweets that have been retweeted many times can be extremely overrepresentative in the sampled tweets. I made this decision because my preliminary analyses with all the tweets, including retweets, found that the popular hashtags were predominantly about movies and/or TV shows, such as 'blackpanther' and '#strangerthings', probably people were excited about those shows and retweeted tweets from the shows' official accounts and relevant celebrities' tweets. I also got rid of tweets that were identified as in languages other than English. These two subsetting rules resulted in 132,469 tweets for text analyses.
 
 The corresponding code file is `01_text_analyses.ipynb`. <br>
 I used the `nltk` and `genism` python package for text analyses.
+
+### Identify Sibling Users
+To idenify sibling users using the tweets that I streamed in, I took the following steps:
+* First, filter out irrelevant tweets using the filtering criteria determined with results of text analyses;
+* Second, select tweets where users mentioend other Twitter account(s) (e.g., @username), and the accounts mentioned in the tweets for National Siblings Day were likely to be the users' siblings; in this step, I could get raw data of groups (e.g., dyads, triads, etc.) of siblings;
+* Finally, filter out non-human users among the 'siblings' identified in the former step by means of botcheck using the [Botometer API] (https://github.com/sxrpsy/botcheck).
+
+The corresponding code file is `02_identify_siblings.ipynb`. 
+
 
 ## Results
 ### Text Analyses: Hashtags
@@ -349,4 +358,17 @@ Distributions of the sentiment scores, including compound, positive, negative, a
 
 First, there seemed to be four clusters in the *compound* scores: very positive (>.50; N = 72937), somewhat positive (>.0 and <.50; N = 15595), neutral (=.00; N = 27716), and negative (<.00; N = 12231). Accordingly, I looked into tweets in each cluster to see whether the relevant or irrelevant tweets tended to dominate any cluster. Example tweets in each cluster according to the compound score can be seen [here](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/sentiment_examples/compound.md). Regrettably, according to the examples, relevant tweets tended to dominate in each cluster, and thus the compound score could not help to filter out irrelevant tweets.
 
-Then, for positive, negative, and neutral scores, I looked into clusters that seemed deviant from the majority of the distribution, which was >.70 for positive, >.20 for negative, and <.30 for neutral scores. 
+Then, for positive, negative, and neutral scores, I looked into clusters that seemed deviant from the majority of the distribution, which was >.70 for positive, >.20 for negative, and <.30 for neutral scores. Example tweets for these three "deviant" clusters can be found [here](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/sentiment_examples/pos_neg_neu.md). Again, sadly, I found both relevant and irrelevant tweets in all those three clusters and so it seemed that I could not use the sentiment analysis or scores to filter out irrelevant tweets.
+
+#### 4. Summary of Text Analysis: Criteria Used to Filter Out Irrelevant Tweets
+In sum, the whole process of text analysis helped me to determine the following criteria to select relevant tweets for identifying siblings and filter out irrelevant tweets:
+* Only keep original tweets by filtering out retweets,
+* Only keep tweets that were identified as in English,
+* Filter out tweets that contained any of the irrelevant hashtags, including 
+   * '#equalpayday', '#tuesdaythoughts', '#lifecourbeeasier', '#zuckerberg', #brochure', '#rack', '#flyer', '#roll', '#cbx_bloomingdays', '#felizmartes', '#temblor', '#mondaymotivation', '#americanidol', '#foodasitcom', '#michaelcohen', '#fcbsfc', '#fft18', '#michaelcohen', "#onlychild",
+* Filter out tweets that contained any of the irrelevant keywords, including
+   * 'research', 'keyword', 'market','digit'.
+
+However, neither ngrams analysis of the tweet content nor the sentiment analysis helped me to determine other criterion for filtering.
+
+
