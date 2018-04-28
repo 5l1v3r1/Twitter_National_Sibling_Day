@@ -56,8 +56,8 @@ The code file for botcheck is `03_botcheck_forshare.R`.
 
 ## Results
 ### Text Analyses: Hashtags
-Hashtags extracted from all the tweets include 101,525 single hashtags, 62,612 bigrams, and 31,328 trigrams.
-The four most frequent single hashtags are #nationalsiblingsday, #nationalsiblingday, #siblingsday, and #siblingday. To make a better representation of other hashtags, I deleted those four from the single hashtag list and bigrams and trigrams that contain any of these four hashtags. With this exclusion criterion, the 15 most frequent occurring single hashtags, bigrams, and trigrams are displayed below respectively.
+From all the tweets that were not retweeted, I extracted hashtags, includng 101,525 single hashtags, 62,612 bigrams, and 31,328 trigrams. Then I counted the frequencies of each single, bigram, and trigram hashtags to find the most frequent, that is, representative ones.
+The four most frequent single hashtags were #nationalsiblingsday, #nationalsiblingday, #siblingsday, and #siblingday. To make a better representation of other hashtags, I deleted those four from the single hashtag list and bigrams and trigrams that contain any of these four hashtags. With this exclusion criterion, the 15 most frequent occurring single hashtags, bigrams, and trigrams are displayed below respectively.
 
 *Occurrences of single hashtags* <br />
 
@@ -266,19 +266,19 @@ The four most frequent single hashtags are #nationalsiblingsday, #nationalsiblin
     </tr>
 </table>
 
-From these hashtags, first we could infer that some tweets can be sibling and/or family themed-- those that include #siblings, #family, #sister(s), #brother(s), and #love, and these hashtags tended to co-occur. 
+From these hashtags, first we could infer that some tweets can be sibling and/or family themed-- those that contained #siblings, #family, #sister(s), #brother(s), and #love, and these hashtags tended to co-occur in same tweets. 
 
 Other hashtags, however, seemed confounding with the National Siblings Day:
    * One theme is with the #equalpayday, because April 10 also happened to be the Equal Pay Day, and this hashtag tended to co-occur with #tuesdaythoughts #lifecouldbeeasier #zuckerberg. 
    * Another group of co-occurring hashtags included #brochure, #rack, #flyer, and #roll. 
-   * Other random hashtags that appeared in the top trigrams (e.g., #michaelcohen, #mondaymotivation, #fcbsfc) looked confusing first, but when I looked into the tweets with these hashtags, I found that those tweets seemed to come from bots and the entire piece of tweets consisted of all kinds of hashtags, for example:
+   * Other random hashtags that appeared in the top trigrams (e.g., #michaelcohen, #mondaymotivation, #fcbsfc) seemed confusing first, but when I looked into the tweets with these hashtags, I found that those tweets seemed to come from bots, and the entire piece of tweets consisted of all kinds of hashtags, for example:
        * '#NationalSiblingsDay\n#FelizMartes\n#temblor\n#CBX_BloomingDays\n#MondayMotivation\n#fft18\n#fcbsfc\n#asiaafricacarnival2018\n#GusIpulMbakPuti\n#PersijaDay\n#CSKvKKR\n#BlackberrysKeepRising\nA great account ❤️👌🏻 A must to follow 😁 \nTwitter: @s_alqhtani7 \nSnap:https://t.co/PYNDtvIx7O'. <br />
    * Another confounding single hashtag is #onlychild. Only children tweeted about National Siblings Day to express their wishes about having siblings, seek compassion from other only children, or highlight their identities as only children. For example:
        * 'Wish I had one #NationalSiblingsDay #onlychild #boo https://t.co/IDH5w2dr6X',
        * 'Shout out to all the Only Childs on #NationalSiblingsDay 🙌🏻\nRemember in French it is said “Je suis fille unique”, it’s good to be unique. It’s not our fault that our parents realised they couldn’t improve on perfection 🤷🏻\u200d♀️ #onlychild',
       * 'Hey Twitter Good Tuesday morning 🐣🐰 Happy national sibling day 👪to everyone who has siblings sincerely from #onlychild'.
 
-Therefore, before the analyses of users and user mentions, I deleted tweets that had these groups of confounding/ irrelevant hashtags.
+Therefore, before the analyses of users and user mentions, I deleted tweets that had these groups of confounding/irrelevant hashtags.
 
 ### Text Analyses: Tweet Content
 Then I extracted all the tweets text to conduct analyses based on the content. Before all the analyses, I eliminated all the following from the text:
@@ -293,15 +293,15 @@ And I tokenized each tweet text into a list of words, transformed all the words 
 First, with the cleaned word tokens, I counted the occurences of each single word (i.e., unigrams), and co-occurences of words, including bigrams and trigrams.
 
 * Unigrams <br>
-Blow is the wordcloud for unigrams. The most common unigrams, unsurprisingly, were 'sibl' (stem for sibling(s)), 'day', 'happi (stem for 'happy'), 'nation', 'broter', and 'sister). Example for other common unigrams include stemmed words for family, celebrate/celebration, thank, and friend, and emojies including '❤' '😂''💕''😘'. However, I did not find any irrelevant common unigrams in the list of 50 most frequent unigrams.
+Below is the wordcloud for unigrams. The most common unigrams, unsurprisingly, were 'sibl' (stem for sibling(s)), 'day', 'happi (stem for 'happy'), 'nation', 'broter', and 'sister. Example for other common unigrams include stemmed words for family, celebrate/celebration, thank, and friend, and emojies including '❤' '😂''💕''😘'. However, I did not find any irrelevant common unigrams in the list of 50 most frequent unigrams.
 ![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/Text_Unigram_WordCloud.png)
 
 * Bigrams <br>
-Blow is the wordcloud for bigrams. The most common bigrams, unsurprisingly, were combinations in "happy national sibling day". Other comon bigrams included "brother sister", "little/big brother/sister", "best friend", "love much", "day ❤". However, I did not find any irrelevant common bigrams in the list of 50 frequent bigrams.
+Below is the wordcloud for bigrams. The most common bigrams, unsurprisingly, were combinations in "happy national sibling day". Other comon bigrams included "brother sister", "little/big brother/sister", "best friend", "love much", "day ❤". However, I did not find any irrelevant common bigrams in the list of 50 frequent bigrams.
 ![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/Text_Bigram_WordCloud.png)
 
 * Trigrams <br>
-Blow is the wordcloud for trigrams. The most common trigrams, unsurprisingly, were combinations in "happy national sibling day". Other comon trigrams included "sibling day love/best/brother/❤/sister/💕", '😂 😂 😂'. Again, I did not find any irrelevant common unigrams in the list of 50 frequent bigrams.
+Below is the wordcloud for trigrams. The most common trigrams, unsurprisingly, were combinations in "happy national sibling day". Other comon trigrams included "sibling day love/best/brother/❤/sister/💕", '😂 😂 😂'. Again, I did not find any irrelevant common unigrams in the list of 50 frequent bigrams.
 ![alt text](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/Text_Trigram_WordCloud.png)
 <br>
 In sum, analyses in this section could not help me rule out irrelevant tweets for identifying sibling dyads.
@@ -369,12 +369,12 @@ In sum, the whole process of text analysis helped me to determine the following 
 * Filter out tweets that contained any of the irrelevant keywords, including
    * 'research', 'keyword', 'market','digit'.
 
-However, neither ngrams analysis of the tweet content nor the sentiment analysis helped me to determine other criterion for filtering.
+However, neither ngrams analyses of the tweet content nor the sentiment analysis helped me to determine other criterion for filtering.
 
 ### Identify Sibling Users
 Using the filtering criteria determined by the text analyses together with subsetting tweets that mentioned at least one Twitter account resulted in a subset of 24,031 tweets for identifying sibling users. For each tweet, the user who post the tweet is refered as "User 1", and user(s) who were mentioned in the tweet are referred as "User 2, 3, ..." hereafter.
 
 With the subset of tweets where Twitter users who could potentially be siblings, I conducted botcheck to rule out non-human users. Noteably, the Botometer API only allows 17,280 requests per day, per user, which corresponds to Twitter's REST API rate limit, 180 requests per 15-minute window under user authentication. Thus running botcheck for all the users identified is time-consuming, and here I want to acknowledge [Tingyu Mao](https://www.linkedin.com/in/tingyu-mao-07812ba2?trk=chatin_wnc_redirect_pubprofile) who helped me run botcheck for a considerable proportion of users in the dataset. 
 
-First, the botcheck was performed among the 24,031 Users 1, to rule out tweets post by the non-human users. Botometer API does not distinguish human vs. non-human users, but returns the *probability* of one Twitter account to be non-human. Documention of the API does not suggest a cutoff for the probability, but previous research with bullying tweets has found that accounts with probability lower than .50 were very likely to be human-users, though this cutoff was relatively stringent and could have a high false negative rate, that is, some human users could have probability over .50 (Zhang & Felmlee, 2017). In this study I prefer lower false positive than false negative rate, thus I adopted the .50 cutoff to filter out all users with the botcheck probability returned as over .50. 
+First, the botcheck was performed among the 24,031 Users 1, to rule out tweets post by the non-human users. Botometer API does not distinguish human vs. non-human users, but returns the *probability* of one Twitter account to be non-human. Documention of the API does not suggest a cutoff for the probability, but previous research with bullying tweets has found that accounts with probability lower than .50 were very likely to be human-users, though this cutoff was relatively stringent and could have a high false negative rate, that is, some human users could have probability over .50 (Zhang & Felmlee, 2017). In this study I prefer lower false positive than false negative rate, thus I adopted the .50 cutoff to filter out all users with the botcheck probability returned as above .50. 
 
