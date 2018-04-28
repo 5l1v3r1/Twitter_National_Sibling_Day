@@ -52,7 +52,7 @@ To idenify sibling users using the tweets that I streamed in, I took the followi
 * Finally, filter out non-human users among the 'siblings' identified in the former step by means of botcheck using the [Botometer API](https://github.com/sxrpsy/botcheck).
 
 The corresponding code file for the first two steps is `02_identify_siblings.ipynb`. <br>
-The code file for botcheck is `03_botcheck.R`. 
+The code file for botcheck is `03_botcheck_forshare.R`. 
 
 ## Results
 ### Text Analyses: Hashtags
@@ -371,4 +371,13 @@ In sum, the whole process of text analysis helped me to determine the following 
 
 However, neither ngrams analysis of the tweet content nor the sentiment analysis helped me to determine other criterion for filtering.
 
+### Identify Sibling Users
+Using the filtering criteria determined by the text analyses together with subsetting tweets that mentioned at least one Twitter account resulted in a subset of 24,031 tweets for identifying sibling users. For each tweet, the user who post the tweet is refered as "User 1", and user(s) who were mentioned in the tweet are referred as "User 2, 3, ..." hereafter.
 
+With the subset of tweets where Twitter users that could potentially be siblings, I conducted botcheck to rule out non-human users. Noteably, the Botometer API only allows 17,280 requests per day, per user, which corresponds to Twitter's REST API rate limit, 180 requests per 15-minute window under user authentication. Thus running botcheck for all the users identified is time-consuming, and here I want to acknowledge [Tingyu Mao](https://cn.linkedin.com/in/tingyu-mao-07812ba2) who helped me run botcheck for a considerable proportion of users in the dataset. 
+First the botcheck was performed 
+
+:
+  * retweets,
+  * tweets with any of the irrelevant hashtags,
+  * tweets with any of the keywords identified in the topic modeling
