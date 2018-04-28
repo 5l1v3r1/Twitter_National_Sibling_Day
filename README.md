@@ -1,5 +1,5 @@
-# Sibling Interactions on Twitter
-## A Sample Identified by Tweets About National Siblings Day on April 10, 2018
+# Identifying Siblings on Twitter:
+## Using Tweets About the National Siblings Day on April 10, 2018
 This is a class project for Timothy Brick's HDFS 597 "Mining Internet with Python" at the Pennsylvania State University.
 * Copyrights to Xiaoran Sun, MS, and Timothy Brick, Ph.D., at the Pennsylvania State University.
 * For citation, please contact Xiaoran Sun xiaoran.sun@psu.edu
@@ -7,31 +7,31 @@ This is a class project for Timothy Brick's HDFS 597 "Mining Internet with Pytho
 ## Study Background
 Siblings play important role in one another's development (Dunn, 1983; McHale, Updegraff, & Whiteman, 2012). Research on siblings has used global questionnaires and interviews to examine their relationships and interactions, mostly through *offline* activities. However, although social media has become an important part of many people's life, especially among youth and young adults (Pew Research Center, 2016), we know much less about how they interact *online*, including on social media (LeBouef & Dworkin, 2017). Twitter is a platform that people use for social networking and obtaining information (Zhao & Rosson, 2009). I use Twitter to examine sibling interactions online because it provides free, open source data through the API, and previous research has used data from Twitter to capture interactions between romantic partners (Garimella, Weber, & Cin, 2014).
 
-One important step to examine sibling interactions on Twitter is to identify siblings, but the identifying process can be time-consuming and expensive, involving a large amount of human annotation work (Sun, Chi, Yin, & McHale, in progress). However, the National Sibling Day on April 10 may allow us to identify sibling Twitter users in a more efficient way. On that day, #NationalSiblingsDay (and other similar hashtags) is a trending topic on Twitter, and people tend to tweet that topic and mention their siblings in the tweet. Therefore, collecting tweets about that topic on that particular day and utilizing a subset of those where one user mentions the other(s), we are likely to identify sibling users in a potentially reliable way.
+One important step to examine sibling interactions on Twitter is to identify siblings, but the identification process can be time-consuming and expensive, involving a large amount of human annotation work (Sun, Chi, Yin, & McHale, in progress). However, the National Siblings Day on April 10 can provide unique opportunity to identify sibling Twitter users in a more efficient way. On that day, #NationalSiblingsDay (and other similar hashtags) is a trending topic on Twitter, and people tend to tweet that topic and mention their siblings in the tweet. Therefore, collecting tweets about that topic on that particular day and utilizing a subset of those where one user mentions the other(s), it is likely to identify sibling users in a potentially reliable way.
 
-Accordingly, in this study, I obtained real-time tweets about National Siblings Day, and used text analysis to identify characteristics that could potentially be helpful to filter relevant tweets that potentially could help to identify sibling Twitter users. Using the characteristics, I filtered potentially relevant tweets, which I then used to identify siblings by the users' mentions in the tweets. With these users identified, I further filtered out the non-human sibling users using BotCheck (Davis, Varol, Ferrara, Flammini, & Menczer, 2016). Finally, to assess the validity of my method for identifying sibling users, I randomly selected a proportion of all the identified sibling users and manually annotated them as siblings vs not siblings, based on their tweets and Twitter profiles, and calculated the percentage of the human-annotated sibling users as index for validity.
+Accordingly, in this study, I obtained real-time tweets about National Siblings Day, and used text analysis to identify characteristics that could potentially be helpful to filter relevant tweets that potentially could help to identify siblings on Twitter. Using the characteristics, I filtered potentially relevant tweets, which I then used to identify siblings by the users' mentions in the tweets. With these users identified, I further filtered out the non-human sibling users using botcheck (Davis, Varol, Ferrara, Flammini, & Menczer, 2016). Finally, to assess the validity of my method for identifying sibling users, I randomly selected a proportion of all the identified sibling users and manually annotated them as siblings vs not siblings, based on their tweets and Twitter profiles, and calculated the percentage of the human-annotated sibling users as index for validity.
 
 ## Method
 ### Streaming Tweets about National Siblings Day
-Starting from 9pm, April 9th, until 4am, April 11st, I used Twitter Streaming API to filter realtime tweets that have any of the hashtags (case-insensitive), including "#nationalsiblingday", "#nationalsiblingsday", "#nationalsibday", "#nationalsibsday", "#siblingday", "#siblingsday", "#sibday", and "#sibsday", and/or any of the key words, including "sibling day", "siblings day", "sibling's day", "sib day", "sib's day", and "sibs day". I stored the tweets in json format on my disk. 
+Starting from 9pm, April 9th, until 4am, April 11st, I used Twitter Streaming API to filter realtime tweets that contained any of the hashtags (case-insensitive), including "#nationalsiblingday", "#nationalsiblingsday", "#nationalsibday", "#nationalsibsday", "#siblingday", "#siblingsday", "#sibday", and "#sibsday", and/or any of the key words, including "sibling day", "siblings day", "sibling's day", "sib day", "sib's day", and "sibs day". I stored the tweets in json format on my disk. 
 
 The corresponding code file is `00_DiskListener.py`, created by Timothy Brick, with little edits by Xiaoran Sun for filtering criterion.
 
 This resulted in 383,040 tweets, with the total data file size as around 2.5GB. To get these raw data, please contact Xiaoran Sun.
 
 ### Pre-Processing Raw Data Files
-The raw data file (in json) is too large and when it's read in Jupyter as a whole, my laptop would crash. Therefore, I used bash command (on the Terminal application) to separate the json file by lines into separate text files.
+The raw data file (in json) was too large and when it was read in Jupyter as a whole, my laptop would crash. Therefore, I used bash command (on the Terminal application) to separate the json file by lines into separate text files.
 
 To separate a big json file into smaller files that are not larger than 30,000 lines, I used:
 `split -l 30000 filename.json`
 
 But these smaller files cannot be read directly into jupyter due to their incompleteness. Therefore, at the beginning of each file, I had to make sure there was or I added a `[`, and at the end of each file, `]`.
 
-To check whether these files are complete as json lists and also get to know the length of each file, I used (bash command):
+To check whether these files were complete as json lists and also get to know the length of each file, I used (bash command):
 `jq '. | length' SmallFileName`. When checked by this command, there was some parse error or EOF with some small files, and I found that it was because `"` at the beginning or the end was reformatted into `“` or `”`. These quotation marks had to be formatted back. I did it manually, but I know it is better to write codes for this task and I will update on this soon.
 
 ### Text Analyses
-Before identifying siblings using the data, I examined what the the users were talking about when they tweeted about National Siblings Day, using text analyses. This procedure was mainly for identifying irrelevant or confounding tweets in the dataset where users were not very possible talking about, especially mentioning their siblings. Characteristics, including hashtags, keywords, and topics, found in this procedure could be used as selection criteria to filter out confounding tweets and keep those that would be relevant.
+Before identifying siblings using the data, I examined what the users were talking about when they tweeted about National Siblings Day, using text analyses. This procedure was mainly for identifying irrelevant or confounding tweets in the dataset where users were not very possible talking about, especially mentioning their siblings. Characteristics, including hashtags, keywords, and topics, found in this procedure could be used as selection criteria to filter out confounding tweets and keep those that would be relevant.
 
 Text analyses conducted include:
   * descriptives of the hashtags, including occurrences and co-occurrences (i.e., bigrams, trigrams) of hashtags,
@@ -40,7 +40,7 @@ Text analyses conducted include:
        * topic modeling,
        * sentiment analyses.
 
-In the analyses, I was only interested in what people were *tweeting*, but not *retweeting*, given that popular accounts with tweets that have been retweeted many times can be extremely overrepresentative in the sampled tweets. I made this decision because my preliminary analyses with all the tweets, including retweets, found that the popular hashtags were predominantly about movies and/or TV shows, such as '#blackpanther' and '#strangerthings', probably people were excited about those shows and retweeted tweets from the shows' official accounts and relevant celebrities' tweets. I also got rid of tweets that were identified as in languages other than English. These two subsetting rules resulted in 132,469 tweets for text analyses.
+In the analyses, I was only interested in what people were *tweeting*, but not *retweeting*, given that tweets from popular accounts that have been retweeted many times can be extremely overrepresentative in the sampled tweets. I made this decision because my preliminary analyses with all the tweets, including retweets, found that the popular hashtags were predominantly about movies and/or TV shows, such as '#blackpanther' and '#strangerthings', probably because people were excited about those shows and retweeted tweets from the shows' official accounts and relevant celebrities' tweets. I also got rid of tweets that were identified as in languages other than English. These two subsetting rules resulted in 132,469 tweets for text analyses.
 
 The corresponding code file is `01_text_analyses.ipynb`. <br>
 I used the `nltk` and `genism` python package for text analyses.
@@ -48,7 +48,7 @@ I used the `nltk` and `genism` python package for text analyses.
 ### Identify Sibling Users
 To idenify sibling users using the tweets that I streamed in, I took the following steps:
 * First, filter out irrelevant tweets using the filtering criteria determined with results of text analyses;
-* Second, select tweets where users mentioned other Twitter account(s) (e.g., @username), and the accounts mentioned in the tweets for National Siblings Day were likely to be the users' siblings; in this step, I could get raw data of groups (e.g., dyads, triads, etc.) of siblings;
+* Second, select tweets where users mentioned other Twitter account(s) (e.g., @username), given that the accounts mentioned in the tweets for National Siblings Day were likely to be the users' siblings; in this step, I could get raw data of groups (e.g., dyads, triads, etc.) of siblings;
 * Finally, filter out non-human users among the 'siblings' identified in the former step by means of botcheck using the [Botometer API](https://github.com/sxrpsy/botcheck).
 
 The corresponding code file for the first two steps is `02_identify_siblings.ipynb`. <br>
@@ -374,10 +374,7 @@ However, neither ngrams analysis of the tweet content nor the sentiment analysis
 ### Identify Sibling Users
 Using the filtering criteria determined by the text analyses together with subsetting tweets that mentioned at least one Twitter account resulted in a subset of 24,031 tweets for identifying sibling users. For each tweet, the user who post the tweet is refered as "User 1", and user(s) who were mentioned in the tweet are referred as "User 2, 3, ..." hereafter.
 
-With the subset of tweets where Twitter users that could potentially be siblings, I conducted botcheck to rule out non-human users. Noteably, the Botometer API only allows 17,280 requests per day, per user, which corresponds to Twitter's REST API rate limit, 180 requests per 15-minute window under user authentication. Thus running botcheck for all the users identified is time-consuming, and here I want to acknowledge [Tingyu Mao](https://cn.linkedin.com/in/tingyu-mao-07812ba2) who helped me run botcheck for a considerable proportion of users in the dataset. 
-First the botcheck was performed 
+With the subset of tweets where Twitter users who could potentially be siblings, I conducted botcheck to rule out non-human users. Noteably, the Botometer API only allows 17,280 requests per day, per user, which corresponds to Twitter's REST API rate limit, 180 requests per 15-minute window under user authentication. Thus running botcheck for all the users identified is time-consuming, and here I want to acknowledge [Tingyu Mao](https://www.linkedin.com/in/tingyu-mao-07812ba2?trk=chatin_wnc_redirect_pubprofile) who helped me run botcheck for a considerable proportion of users in the dataset. 
 
-:
-  * retweets,
-  * tweets with any of the irrelevant hashtags,
-  * tweets with any of the keywords identified in the topic modeling
+First, the botcheck was performed among the 24,031 Users 1, to rule out tweets post by the non-human users. Botometer API does not distinguish human vs. non-human users, but returns the *probability* of one Twitter account to be non-human. Documention of the API does not suggest a cutoff for the probability, but previous research with bullying tweets has found that accounts with probability lower than .50 were very likely to be human-users, though this cutoff was relatively stringent and could have a high false negative rate, that is, some human users could have probability over .50 (Zhang & Felmlee, 2017). In this study I prefer lower false positive than false negative rate, thus I adopted the .50 cutoff to filter out all users with the botcheck probability returned as over .50. 
+
