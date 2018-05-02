@@ -54,6 +54,11 @@ To idenify sibling users using the tweets that I streamed in, I took the followi
 The corresponding code file for the first two steps is `02_identify_siblings.ipynb`. <br>
 The code file for botcheck is `03_botcheck_forshare.R`. 
 
+### Validate Sibling Users
+The final step was to validate whether the sibling users identified in the previous step were actual siblings. I randomly selected 200 tweets from the sibling-mention tweets determined by the previous step, and manually classified among these 200 tweets, whether the user(s) mentioned in the tweets were siblings based on the tweet content and the users' profiles and human judgement. A more reliable approach is to form a group of independent coders and classify the randomly subsetted tweets. However, due to the time limit of this project, I relied on my own judgement for now, but independent coding should be an important further step.
+
+A true positive rate over .80 would indicate that the approach for identifying sibling Twitter users in this project is reliable.
+
 ## Results
 ### Text Analyses: Hashtags
 From all the tweets that were not retweeted, I extracted hashtags, includng 101,525 single hashtags, 62,612 bigrams, and 31,328 trigrams. Then I counted the frequencies of each single, bigram, and trigram hashtags to find the most frequent, that is, representative ones.
@@ -384,4 +389,7 @@ Below is the distribution of bot probability for Users 1. Among these 24,031 use
 Then with these 22,407 tweets, I further conducted botcheck among all the users mentioned in the tweets. A large majority of these tweets (17,150) only had one mention, but there were also a considerble number of tweets had two or more, up to 11, mentions. Although it is very unlikely that all of these 11 mentions are siblings, it is possible that at least one of the mentions is a sibling, and others can be other human or non-human users. The total number of user mentions among these tweets were 30,498. 
 
 Again, using botcheck, I filtered out all the mentioned accounts that had either NULL or above .50 botcheck scores. The aim was to keep all the tweets that had *at least one* mentioned user as having a botcheck score lower than .50. Results showed that, however, all the 22,407 tweets reached this criterion, and thus no tweets were deleted in this step. 
+
+### Validate Sibling Users Identified in the Previous Step
+
 
