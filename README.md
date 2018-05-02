@@ -5,7 +5,7 @@ This is a class project for Timothy Brick's HDFS 597 "Mining Internet with Pytho
 * For citation, please contact Xiaoran Sun xiaoran.sun@psu.edu
 
 ## Study Background
-Siblings play important role in one another's development (Dunn, 1983; McHale, Updegraff, & Whiteman, 2012). Research on siblings has used global questionnaires and interviews to examine their relationships and interactions, mostly through *offline* activities. However, although social media has become an important part of many people's life, especially among youth and young adults (Pew Research Center, 2016), we know much less about how they interact *online*, including on social media (LeBouef & Dworkin, 2017). Twitter is a platform that people use for social networking and obtaining information (Zhao & Rosson, 2009). I use Twitter to examine sibling interactions online because it provides free, open source data through the API, and previous research has used data from Twitter to capture interactions between romantic partners (Garimella, Weber, & Cin, 2014).
+Siblings play important role in one another's development (Dunn, 1983; McHale, Updegraff, & Whiteman, 2012). Research on siblings has used global questionnaires and interviews to examine their relationships and interactions, mostly through *offline* activities. However, although social media has become an important part of many people's life, especially among youth and young adults (Pew Research Center, 2018), we know much less about how they interact *online*, including on social media (LeBouef & Dworkin, 2017). Twitter is a platform that people use for social networking and obtaining information (Zhao & Rosson, 2009). I use Twitter to examine sibling interactions online because it provides free, open source data through the API, and previous research has used data from Twitter to capture interactions between romantic partners (Garimella, Weber, & Cin, 2014).
 
 One important step to examine sibling interactions on Twitter is to identify siblings, but the identification process can be time-consuming and expensive, involving a large amount of human annotation work (Sun, Chi, Yin, & McHale, in progress). However, the National Siblings Day on April 10 can provide unique opportunity to identify sibling Twitter users in a more efficient way. On that day, #NationalSiblingsDay (and other similar hashtags) is a trending topic on Twitter, and people tend to tweet that topic and mention their siblings in the tweet. Therefore, collecting tweets about that topic on that particular day and utilizing a subset of those where one user mentions the other(s), it is likely to identify sibling users in a potentially reliable way.
 
@@ -377,7 +377,7 @@ In sum, the whole process of text analysis helped me to determine the following 
 However, neither ngrams analyses of the tweet content nor the sentiment analysis helped me to determine other criterion for filtering.
 
 ### Identify Sibling Users
-Using the filtering criteria determined by the text analyses together with subsetting tweets that mentioned at least one Twitter account resulted in a subset of 24,031 tweets for identifying sibling users. For each tweet, the user who post the tweet is refered as "User 1", and user(s) who were mentioned in the tweet are referred as "User 2, 3, ..." hereafter.
+Using the filtering criteria determined by the text analyses together with subsetting tweets that mentioned at least one Twitter account resulted in a subset of 24,031 tweets for identifying sibling users. For each tweet, the user who post the tweet is refered as "User 1" hereafter.
 
 With the subset of tweets where Twitter users who could potentially be siblings, I conducted botcheck to rule out non-human users. Noteably, the Botometer API only allows 17,280 requests per day, per user, which corresponds to Twitter's REST API rate limit, 180 requests per 15-minute window under user authentication. Thus running botcheck for all the users identified is time-consuming, and here I want to acknowledge [Tingyu Mao](https://www.linkedin.com/in/tingyu-mao-07812ba2?trk=chatin_wnc_redirect_pubprofile) and [Mengjun Han](https://angel.co/mengjun-han) who helped me run botcheck for a considerable proportion of users in the dataset. 
 
@@ -391,5 +391,42 @@ Then with these 22,407 tweets, I further conducted botcheck among all the users 
 Again, using botcheck, I filtered out all the mentioned accounts that had either NULL or above .50 botcheck scores. The aim was to keep all the tweets that had *at least one* mentioned user as having a botcheck score lower than .50. Results showed that, however, all the 22,407 tweets reached this criterion, and thus no tweets were deleted in this step. 
 
 ### Validate Sibling Users Identified in the Previous Step
+I randomly selected 200 tweets from the 22,407 tweets and manually checked whether the User 1 was a sibling with at lease one of the users mentioend in each tweet, based on the tweet content and the user profiles. Among the 200 dyads (or triads and more) of siblings, I found 140 as actual siblings, and thus I got a true positive rate as 70%. These actual siblings usually either shared same last names in their user names or profile names, or post childhood pictures for a throwback in the tweet. Some tweets also showed sibling rivalry (in a sarcastic way), for example, "happy national siblings day losers ❣️ love to hate yaa, @username2 @username3", which reflected the love-hate relationship characteristic in sibling dynamics (Dunn, 2002). 
 
+For the 30% who I found were not actual siblings, they can be:
+* Friends who stated their relationships were as close as siblings:
+  * "happy siblings day to my sista from another mother @username2 ❤️❤️❤️"
+  * "Happy #NationalSiblingsDay to @username2 since everyone thinks we are siblings anyways lol....ð❤️ð #bestfriends #brid"
+  * "When you’re an only child, but I count @username2 as my siblings. ❤️ #NationalSiblingsDay"
+* Colleagues at work or in the same occupations who show their close relationship:
+  * "Happy #nationalsiblingsday @GIGCatering @username2 and @username3 #GIGLegends #Cateringheadlinerssince1984 #makeithappenpeople"
+* Two or more users mentioned in the tweets were siblings with each other, but not with User 1 (friend, parent, or fan):
+  * "Happy National Siblings day to these two beauties!! ððð @username2 @username3"
+  * "It’s #NationalSiblingsDay Mia and AJ   @username2 and @username3  Enjoy the day you crazy kids! ð "
+  * "Dominance comes in many forms like @uclabeachvb twin duo @username2 and @username3. #NationalSiblingsDay"
+  * "my favourite on screen sisters, definitly Wynonna and Wavery Earp! @DominiqueP_C @melanie0n  #NationalSiblingsDay"
+* Non-human users whose botcheck scores were lower than .50:
+  * Reagan_Airport:	"Wishing @Dulles_Airport a happy #NationalSiblingsDay. What a pretty baby picture. ð¶"
+  * "Beers with my brother. #NationalSiblingsDay - Drinking a Chocolate Sombrero (2017) by @clownshoesbeer"
+  * "#NationalSiblingsDay We Are Family https://t.co/UCgZvP2i7F via @YouTube https://t.co/DPgIkPJjB7"
+* Users who retweeted another tweet celebrating National Siblings Day and added some comments, which could not be filtered out by the "retweet_status" in the Twitter object.
+
+## Summary
+In this project, I streamed in 383,040 tweets posted on National Siblings Day, 2018, in order to identify sibling users on Twitter using these tweets. To filter out irrelevant tweets, I conducted text analysis, including hashtag and tweet content ngrams, topic modeling, and sentiment analysis, to determine filtering criteria, which resulted in 128,481 tweets retained. Then I selected the subset of tweets that contained user mentions, resulting in 24,031 tweets. Further, I conducted botcheck to filter out users who had relatively high likelihood of being non-human accounts, and finally led to 22,407 tweets for validation. Validation of randomly selected 200 tweets from this final subset showed a 70% true positive rate and found some characteristics that often appeared among tweets for actual siblings, such as same last name in usernames and/or screen names, childhood pictures, and love-hate language. Therefore, to further increase the truw positive rate, more natural language processing tools can be utilized to determine filtering criteria.
+
+## Asking for Comments or Suggestions:
+I would appreciate a lot if you could leave any comments or suggestions for this project! Also, I have some specific concerns for which I would like your feedback!
+* Should I conduct text analysis *after* the user-mention filtering instead? In other words, I am wondering if it is better to find out common themes in tweets where people talked about National Siblings Dat *and* mentioned another Twitter account. I did not take this sequence in my analyses because I wanted to get an idea about what people were tweeting about on National Siblings Day in general, and the whole dataset was much larger than the user-mention subset, which could made sure that I had enough data for counting common ngrams and topic modeling.
+* Any other text analyses I can do to filter out irrelevant tweets?
+* Any other analyses I can do to determine sibling users, especially after seeing the manual classification descriptives?
+* Specific question for Tim: Since you know my other Twitter study (based on Christmas, 2015 data and 279 sibling dyads identified with manual classification), do you think this project is a separate paper from that study, or I should combine these two samples? Also, what kind of connection or cross-validation do you think I can build between these two samples?
+
+##References
+Dunn, J. (1983). Sibling relationships in early childhood. *Child Development, 54,* 787. doi:10.2307/1129886
+Garimella, V. R. K., Weber, I., & Dal Cin, S. (2014, November). From “I love you babe” to “leave me alone”-Romantic Relationship Breakups on Twitter. In *International Conference on Social Informatics* (pp. 199-215). Springer, Cham. doi:10.1007/978-3-319-13734-6_14
+LeBouef, S. & Dworkin, J. (2017, November). *Near, Far, Wherever You Are: Siblings and Social Media Communication*. Paper presented at the National Council on Family Relations. Orlando, FL.
+McHale, S. M., Updegraff, K. A., & Whiteman, S. D. (2012). Sibling relationships and influences in childhood and adolescence. *Journal of Marriage and Family, 74*, 913-930. doi:10.1111/j.1741-3737.2012.01011.x
+Sun, X., Chi, G., Yin, J., & McHale, S. M. (*in progress*). *Siblings’ Interactions and Shared Interests on Twitter: Analyses of A Selected Sibling Sample Based on Archived Twitter Data*.
+Pew Research Center (2018). *Social Media Use in 2018*. Retrived from http://www.pewinternet.org/2018/03/01/social-media-use-in-2018/.
+Zhao, D., & Rosson, M. B. (2009, May). How and why people Twitter: the role that micro-blogging plays in informal communication at work. In *Proceedings of the ACM 2009 international conference on Supporting group work* (pp. 243-252). ACM. doi:10.1145/1531674.1531710
 
