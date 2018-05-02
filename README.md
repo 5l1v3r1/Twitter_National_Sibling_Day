@@ -421,7 +421,8 @@ I would appreciate a lot if you could leave any comments or suggestions for this
 * Any other analyses I can do to determine sibling users, especially after seeing the manual classification descriptives?
 * Is .70 as true positive rate good enough? How should I determine the cutoff?
 * Should I also check the true negative rate?
-* Specific question for Tim: Since you know my other Twitter study (based on Christmas, 2015 data and 279 sibling dyads identified with manual classification), do you think this project is a separate paper from that study, or I should combine these two samples? Also, what kind of connection or cross-validation do you think I can build between these two samples?
+* Specific question based on my other study using Twitter (based on Christmas, 2015 data and 279 sibling dyads identified with manual classification)- poster can be found [here](https://github.com/sxrpsy/Twitter_National_Sibling_Day/blob/master/output_pictures/Sun%20Twitter%202018-4-11.pdf). Do you think this project is a separate paper from that study, or I should combine these two samples? Also, what kind of connection or cross-validation do you think I can build between these two samples?
+* Any further steps for turning this into a publication?
 
 ## References
 * Davis, C. A., Varol, O., Ferrara, E., Flammini, A., & Menczer, F. (2016, April). Botornot: A system to evaluate social bots. In *Proceedings of the 25th International Conference Companion on World Wide Web* (pp. 273-274). International World Wide Web Conferences Steering Committee.
