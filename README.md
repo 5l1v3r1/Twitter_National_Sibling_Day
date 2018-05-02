@@ -416,7 +416,7 @@ In this project, I streamed in 383,040 tweets posted on National Siblings Day, 2
 
 ## Asking for Comments or Suggestions:
 I would appreciate a lot if you could leave any comments or suggestions for this project! Also, I have some specific concerns for which I would like your feedback!
-* Should I conduct text analysis *after* the user-mention filtering instead? In other words, I am wondering if it is better to find out common themes in tweets where people talked about National Siblings Dat *and* mentioned another Twitter account. I did not take this sequence in my analyses because I wanted to get an idea about what people were tweeting about on National Siblings Day in general, and the whole dataset was much larger than the user-mention subset, which could made sure that I had enough data for counting common ngrams and topic modeling.
+* Should I conduct text analysis *after* the user-mention filtering instead? In other words, I am wondering if it is better to find out common themes in tweets where people talked about National Siblings Dat *and* mentioned another Twitter account. I did not take this sequence in my analyses because I wanted to get an idea about what people were tweeting about on National Siblings Day in general, and the whole dataset was much larger than the user-mention subset, which could make sure that I had enough data for counting common ngrams and topic modeling.
 * Any other text analyses I can do to filter out irrelevant tweets?
 * Any other analyses I can do to determine sibling users, especially after seeing the manual classification descriptives?
 * Is .70 as true positive rate good enough? How should I determine the cutoff?
