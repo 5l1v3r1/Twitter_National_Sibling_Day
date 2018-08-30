@@ -4,6 +4,17 @@ This is a class project for Timothy Brick's HDFS 597 "Mining Internet with Pytho
 * Copyrights to Xiaoran Sun, MS, and Timothy Brick, Ph.D., at the Pennsylvania State University.
 * For citation, please contact Xiaoran Sun xiaoran.sun@psu.edu
 
+### (Updates on 2018-8-30 for SODA502 class project)
+Below is what have done in the last semester for this project. As you can tell, it has been very preliminary and descriptive. Therefore, for SODA 502 class project, I would like to expand on this project by developing machine learning algorithms using the existing data to identify siblings on Twitter. Possible steps include:
+* Select features (i.e., predictors) for model training. Possible features include n-gram words, hashtags, sentiment scores, correlations to certain topics (summarized by LDA or other topic modeling algorithm), Twitter users' following accounts & followers, interactions between the two users (e.g., mentions), screen names, and anything else that makes sense.
+* Train models for identifying whether the tweet was *about/for* siblings or not.
+* Train models for identifying whether the other Twitter user mentioned in the tweet was a sibling or not.
+* In the model training procedure, first we need some human annotation (i.e., manual coding) work for classification outcome. I did this for my other project last semester, and on average the coding speed is 10 tweets per minute. Therefore, let's say if each teammate needs to code 1000 tweets, it will take less than two hours.
+* For training models, I would like to try various types of algorithms and compare which works better. Examples are: (Ridge) logistic regression, Support Vector Machine, Decision Tree ensembles (e.g., boosted regression trees, Random Forest).
+* In addition to finding out models with better predictive performance, another goal is feature selection. For example, it would be interesting to find out which features contribute the most to the predictive power!
+
+If you are interested in this project, please join me! We can make a plan together for how to make this works!
+
 ## Study Background
 Siblings play important role in one another's development (Dunn, 1983; McHale, Updegraff, & Whiteman, 2012). Research on siblings has used global questionnaires and interviews to examine their relationships and interactions, mostly through *offline* activities. However, although social media has become an important part of many people's life, especially among youth and young adults (Pew Research Center, 2018), we know much less about how they interact *online*, including on social media (LeBouef & Dworkin, 2017). Twitter is a platform that people use for social networking and obtaining information (Zhao & Rosson, 2009). I use Twitter to examine sibling interactions online because it provides free, open source data through the API, and previous research has used data from Twitter to capture interactions between romantic partners (Garimella, Weber, & Cin, 2014).
 
