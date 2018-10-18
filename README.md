@@ -1,7 +1,6 @@
 # Identifying Siblings on Twitter:
 ## Using Tweets About the National Siblings Day on April 10, 2018
-This is a class project for Timothy Brick's HDFS 597 "Mining Internet with Python" at the Pennsylvania State University.
-* Copyrights to Xiaoran Sun, MS, and Timothy Brick, Ph.D., at the Pennsylvania State University.
+* Copyrights to Xiaoran Sun, MS, at the Pennsylvania State University.
 * For citation, please contact Xiaoran Sun xiaoran.sun@psu.edu
 
 ### (Updates on 2018-8-30 for SODA502 class project)
