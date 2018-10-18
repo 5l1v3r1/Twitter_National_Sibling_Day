@@ -4,7 +4,7 @@
 * For citation, please contact Xiaoran Sun xiaoran.sun@psu.edu
 
 ### (Updates on 2018-8-30 for SODA502 class project)
-Below is what have done in the last semester for this project. As you can tell, it has been very preliminary and descriptive. Therefore, for SODA 502 class project, I would like to expand on this project by developing machine learning algorithms using the existing data to identify siblings on Twitter. Possible steps include:
+Below is what I have done in the last semester for this project. As you can tell, it has been very preliminary and descriptive. Therefore, for SODA 502 class project, I would like to expand on this project by developing machine learning algorithms using the existing data to identify siblings on Twitter. Possible steps include:
 * Select features (i.e., predictors) for model training. Possible features include n-gram words, hashtags, sentiment scores, correlations to certain topics (summarized by LDA or other topic modeling algorithm), Twitter users' following accounts & followers, interactions between the two users (e.g., mentions), screen names, and anything else that makes sense.
 * Train models for identifying whether the tweet was *about/for* siblings or not.
 * Train models for identifying whether the other Twitter user mentioned in the tweet was a sibling or not.
